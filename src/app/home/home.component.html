@@ -1,8 +1,8 @@
 <div class="row" >
     <div class="col">
-        <div class="container menu-wrapper" style="margin-top: 10px;">
+        <div class="container menu-wrapper" style="margin-top: 10px; max-height: 20vh;">
             <h5>Top Communities:...........</h5>
-            <div class="menu">
+            <div class="menu" style="max-height: 15vh; overflow-x: auto;">
                 <li style="list-style:none; display: inline-block; text-align: center;">
                     <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
                     <p style="padding:0 7px;">DjangoDevs</p>                                                                               
@@ -22,37 +22,13 @@
                 <li style="list-style:none; display: inline-block; text-align: center;">
                     <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
                     <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-            </div>
-            <div class="paddles">
-                <button class="left-paddle paddle hidden">
-                    <
-                </button>
-                <button class="right-paddle paddle">
-                    >
-                </button>
-            </div>
+                </li>                
+            </div>            
         </div>
     </div>
     <div class="col">
         <div class="container" style="height: 20vh; width: 90%; background-color: #7e93a7bd; margin-top: 10px;">
-            <h5>Top Communities:...........</h5>
+            <h5>Trending Communities:...........</h5>
         </div>
     </div>
  </div>
@@ -106,25 +82,14 @@
     <!-- Feed section -->
     <div class="col-md-6">
         <p>Posts:.........................</p>
-        <div class="container" *ngFor='let post of posts' style="height: 65vh;">
-            <script>
-                $("#shortpost").click(function() {
-                    var big = document.getElementById("fullpost");
-                    var small = document.getElementById("briefpost");
-                    if (big.style.display === "none") {
-                        big.style.display = "block";           
-                    } else {
-                        big.style.display = "none";           
-                    }
-                });
-            </script>
+        <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
             <style>
                 #fullpost {
                     outline: solid 0.02em orange;
                     display: none;                        
                 }
             </style>              
-            <div class="container" id="shortpost" style="outline: solid 0.02em orange;">
+            <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
                 <div class="row" style="height: 40px;">                       
                     <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
                         <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
@@ -136,7 +101,7 @@
                 </div>
             </div>
            
-            <div class="container" id="fullpost">
+            <div class="container" id="fullpost" (click)='minimisepost(true)'>
                 <div class="row" style="height: 40px;">
                    
                     <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
@@ -151,6 +116,7 @@
                         <p>And other stuff</p>
                         <p>And all other stuff</p>
                         <p style="padding: 10px;">{{post.description}}</p>
+                        <a href="{{post.live_link}}">{{post.live_link}}</a>
                     </div>                       
                 </div>
             </div>
@@ -199,92 +165,5 @@
         </div>
     </div>   
   
- </div>
- <script>
-    // duration of scroll animation
-    var scrollDuration = 300;
-    // paddles
-    var leftPaddle = document.getElementsByClassName('left-paddle');
-    var rightPaddle = document.getElementsByClassName('right-paddle');
-    // get items dimensions
-    var itemsLength = $('.item').length;
-    var itemSize = $('.item').outerWidth(true);
-    // get some relevant size for the paddle triggering point
-    var paddleMargin = 20;
-  
-    // get wrapper width
-    var getMenuWrapperSize = function() {
-        return $('.menu-wrapper').outerWidth();
-    }
-    var menuWrapperSize = getMenuWrapperSize();
-    // the wrapper is responsive
-    $(window).on('resize', function() {
-        menuWrapperSize = getMenuWrapperSize();
-    });
-    // size of the visible part of the menu is equal as the wrapper size
-    var menuVisibleSize = menuWrapperSize;
-  
-    // get total width of all menu items
-    var getMenuSize = function() {
-        return itemsLength * itemSize;
-    };
-    var menuSize = getMenuSize();
-    // get how much of menu is invisible
-    var menuInvisibleSize = menuSize - menuWrapperSize;
-  
-    // get how much have we scrolled to the left
-    var getMenuPosition = function() {
-        return $('.menu').scrollLeft();
-    };
-  
-    // finally, what happens when we are actually scrolling the menu
-    $('.menu').on('scroll', function() {
-  
-        // get how much of menu is invisible
-        menuInvisibleSize = menuSize - menuWrapperSize;
-        // get how much have we scrolled so far
-        var menuPosition = getMenuPosition();
-  
-        var menuEndOffset = menuInvisibleSize - paddleMargin;
-  
-        // show & hide the paddles
-        // depending on scroll position
-        if (menuPosition <= paddleMargin) {
-            $(leftPaddle).addClass('hidden');
-            $(rightPaddle).removeClass('hidden');
-        } else if (menuPosition < menuEndOffset) {
-            // show both paddles in the middle
-            $(leftPaddle).removeClass('hidden');
-            $(rightPaddle).removeClass('hidden');
-        } else if (menuPosition >= menuEndOffset) {
-            $(leftPaddle).removeClass('hidden');
-            $(rightPaddle).addClass('hidden');
-    }
-  
-        // print important values
-        $('#print-wrapper-size span').text(menuWrapperSize);
-        $('#print-menu-size span').text(menuSize);
-        $('#print-menu-invisible-size span').text(menuInvisibleSize);
-        $('#print-menu-position span').text(menuPosition);
-  
-    });
-  
-    // scroll to left
-    $(rightPaddle).on('click', function() {
-        $('.menu').animate( { scrollLeft: menuInvisibleSize}, scrollDuration);
-    });
-  
-    // scroll to right
-    $(leftPaddle).on('click', function() {
-        $('.menu').animate( { scrollLeft: '0' }, scrollDuration);
-    });
- </script>
-  
-  
-  
-  
-  
-  
- 
- 
+</div>
  
