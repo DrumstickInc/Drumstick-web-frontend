@@ -1,3 +1,46 @@
-#navbar {
+/*.nav {
     background: rgb(219, 58, 58);
+}*/
+.print {    
+    position: relative;
+    margin-left: -2px;
+    width: 45px;
+    height: 50px;
+    background: url("https://media.istockphoto.com/vectors/tribal-pattern-vector-seamless-vector-id814505894");
+    background-size: contain;    
+}
+.line1 {
+    position: relative;
+    border-left: 7px solid #FD7F20;
+    height: 50px;      
+    left: 0.2%;
+}
+.line2 {
+    position: relative;
+    border-left: 3px solid #000000;
+    height: 50px;      
+    left: 0.3%;
+}
+.brand {
+    font-family: "Ovo";
+    color: #FD7F20;
+    padding-right: 70%;
+    position: relative;
+    left:0.4%;
+    font-size: 30px;
+}
+
+.login {
+    background: #08DD80;
+    a {
+        color: white;
+        font-weight: bold;
+    }
+}
+.signup {
+    border: 1px solid #08DD80;
+    a {
+        color: #08DD80;
+        font-weight: bold;
+    }
 }

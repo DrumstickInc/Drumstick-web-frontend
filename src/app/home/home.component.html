@@ -1,43 +1,47 @@
-<div class="row" >
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+<!--Navbar-->
+<app-navbar></app-navbar>
+
+<div class="container-fluid" style="background: rgba(245, 245, 245, 0.562);">
+    <div class="row" >
     <div class="col">
-        <div class="container menu-wrapper" style="margin-top: 10px; max-height: 20vh;">
-            <h5>Top Communities:...........</h5>
-            <div class="menu" style="max-height: 15vh; overflow-x: auto;">
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>
-                <li style="list-style:none; display: inline-block; text-align: center;">
-                    <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 70px; height: 70px; border-radius: 50%; padding: 0;">
-                    <p style="padding:0 7px;">DjangoDevs</p>                                                                               
-                </li>                
-            </div>            
+        <div class="container top-com">
+            <h4 class="top-com-heading">Top Communities</h4>
         </div>
     </div>
     <div class="col">
         <div class="container" style="height: 20vh; width: 90%; background-color: #7e93a7bd; margin-top: 10px;">
             <h5>Trending Communities:...........</h5>
+            <!-- Communities loop start-->
+            <div id="elem">
+                <label>
+                  <input type="radio" />View</label>
+                <label>
+                  <input type="radio" />All</label>
+                <label>
+                  <input type="radio" />New</label>
+                <label>
+                  <input type="radio" />Unread</label>
+                <label>
+                  <input type="radio" />Favorites</label>
+                <label>
+                  <input type="radio" />Bulk Print</label>
+                <label>
+                  <input type="radio" />Bulk Save</label>
+                <label>
+                  <input type="radio" />Save Library</label>
+            </div>                          
+            <!-- Communities loop end-->            
         </div>
     </div>
- </div>
- <div class="row" style="margin-top: 30px;">
-   
+    </div>
+    <div class="row" style="margin-top: 30px;">   
     <!-- Notifications and News Section-->
     <div class="col">
-        <div class="container" style="height: 40vh; width:90%;">
-  
+        <div class="container" style="height: 40vh; width:90%; margin-bottom: 20px;">
+ 
             <p> Notifications:.................</p>
             <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
                 <!-- Loop notifications -->                             
@@ -50,11 +54,11 @@
                         </div>
                         <div class="col"><!-- empty column--></div>
                     </div>                   
-                </li>
-                <hr>
-                <!-- End loop-->                                   
+               </li>
+               <hr>
+               <!-- End loop-->                                   
             </div>
-  
+ 
             <p>News:..................</p>
             <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
                 <!-- Loop relevant news -->             
@@ -71,57 +75,58 @@
                 <hr>
                 <!-- End loop-->                                   
             </div>
-  
+ 
             <p>Ad:.................</p>
             <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
-               
+
             </div>
         </div>
     </div>
-  
+ 
     <!-- Feed section -->
-    <div class="col-md-6">
-        <p>Posts:.........................</p>
-        <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
-            <style>
-                #fullpost {
-                    outline: solid 0.02em orange;
-                    display: none;                        
-                }
-            </style>              
-            <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
-                <div class="row" style="height: 40px;">                       
-                    <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                        <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                    </p>
-                    <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
-                </div>
-                <div class="row" style="background: #d3dae2;">
-                    <p style="padding: 10px;">{{post.description}}</p>
-                </div>
-            </div>
-           
-            <div class="container" id="fullpost" (click)='minimisepost(true)'>
-                <div class="row" style="height: 40px;">
-                   
-                    <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                        <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                    </p>
-                    <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
-                </div>
-                <div class="row" style="background: #d3dae2; height: 30vh;">
-                    <div class="container">
-                        <h5> Full post</h5>
-                        <p>Some other stuff</p>
-                        <p>And other stuff</p>
-                        <p>And all other stuff</p>
+    <div class="col-md-6" style="margin-top: 20px;">
+        <div class="container">
+            <p>Posts:.........................</p>
+            <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
+                <style>
+                    #fullpost {
+                        outline: solid 0.02em orange;
+                        display: none;                        
+                    }
+                </style>              
+                <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
+                    <div class="row" style="height: 40px;">                       
+                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                            <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
+                        </p>
+                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                    </div>
+                    <div class="row" style="background: #d3dae2;">
                         <p style="padding: 10px;">{{post.description}}</p>
-                        <a href="{{post.live_link}}">{{post.live_link}}</a>
-                    </div>                       
+                    </div>
+                </div>
+            
+                <div class="container" id="fullpost" (click)='minimisepost(true)'>
+                    <div class="row" style="height: 40px;">
+                    
+                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                            <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
+                        </p>
+                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                    </div>
+                    <div class="row" style="background: #d3dae2; height: 30vh;">
+                        <div class="container">
+                            <h5> Full post</h5>
+                            <p>Some other stuff</p>
+                            <p>And other stuff</p>
+                            <p>And all other stuff</p>
+                            <p style="padding: 10px;">{{post.description}}</p>
+                            <a href="{{post.live_link}}">{{post.live_link}}</a>
+                        </div>                       
+                    </div>
                 </div>
             </div>
-        </div>
-       
+        </div>       
     </div>
   
     <!-- My communities and projects-->
@@ -142,8 +147,7 @@
                     </div>                   
                 </li>
                 <hr>
-                <!-- End loop-->
-                                   
+                <!-- End loop-->                                                   
             </div>
   
             <p>My projects:...............</p>
@@ -165,5 +169,5 @@
         </div>
     </div>   
   
+    </div>
 </div>
- 
