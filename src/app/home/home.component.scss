@@ -48,4 +48,9 @@
   .hide {
     display: none;
   }
- 
+  .circle {
+    height: 35px;
+    width: 35px;
+    background-color: red;
+    border-radius: 50%;
+  }

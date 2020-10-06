@@ -5,6 +5,7 @@ export class Post {
     tag_id: number;
     live_link: string;
     repo_link: string;
+    post_heading: string;
     description: string;
     deadline: string;
     creation: string;

@@ -86,49 +86,62 @@
         </div>
  
         <!-- Feed section -->
-        <div class="col-5" style="margin-top: 20px;">
-            <div class="container">
-                <p>Posts:.........................</p>
-                <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
-                    <style>
-                        #fullpost {
-                            outline: solid 0.02em orange;
-                            display: none;                        
-                        }
-                    </style>              
-                    <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
-                        <div class="row" style="height: 40px;">                       
-                            <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                                <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                            </p>
-                            <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
-                        </div>
-                        <div class="row" style="background: #d3dae2;">
-                            <p style="padding: 10px;">{{post.description}}</p>
-                        </div>
+        <div class="col-5" style="margin-top: 40px;">
+                           
+            <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
+                <style>
+                    #fullpost {
+                        outline: solid 0.02em orange;
+                        display: none;                        
+                    }
+                </style>              
+                <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
+                    <div class="row" style="height: 45px;">                       
+                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                            <img src="https://images.unsplash.com/photo-1601348589944-1fd013316557?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=tyler-nix-i_ZNBXr7JxQ-unsplash.jpg" style="width: 35px; height: 35px; border-radius: 50%;">
+                        </p>
+                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Jon Skeet </p>
                     </div>
-                
-                    <div class="container" id="fullpost" (click)='minimisepost(true)'>
-                        <div class="row" style="height: 40px;">
-                        
-                            <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                                <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                            </p>
-                            <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                    <div class="row" style="background: #fafafa;">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-md-9">
+                                <h5>{{post.post_heading}}</h5>
+                            </div>
+                            <div class="col">
+                                <a href="{{post.repo_link}}"><img src="https://png2.cleanpng.com/dy/04dbbc4c79ef867963784d36434f81ee/L0KzQYm3WMI1N5D6fZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6Tfxwb5CyiNH7dHHlfLa0jvV1f5D3g59wcnHzeLrqk71kdJp1Rdtsb372Pbf2kr1nepZqRdtsb379cX7qigJkdJYyi9HsaXHvPYbpVBZmPGdnTNdsOEG6PoO3WMAyPGM7Sac8NUGzSIO3U8MzOmgziNDw/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b4ec817.2080142615351082033227.png" style="height: 35px; width: 35px;"></a>
+                                <a href="{{post.repo_link}}">
+                                    <div class="circle">
+                                        <h4>D</h4>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="row" style="background: #d3dae2; height: 30vh;">
-                            <div class="container">
-                                <h5> Full post</h5>
-                                <p>Some other stuff</p>
-                                <p>And other stuff</p>
-                                <p>And all other stuff</p>
-                                <p style="padding: 10px;">{{post.description}}</p>
-                                <a href="{{post.live_link}}">{{post.live_link}}</a>
-                            </div>                       
-                        </div>
+                        <p style="padding: 10px;">{{post.description}}</p>
                     </div>
                 </div>
-            </div>       
+            
+                <div class="container" id="fullpost" (click)='minimisepost(true)'>
+                    <div class="row" style="height: 40px;">
+                    
+                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                            <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
+                        </p>
+                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                    </div>
+                    <div class="row" style="background: #ffffff; height: 30vh;">
+                        <div class="container">
+                            <h5> Full post</h5>
+                            <p>Some other stuff</p>
+                            <p>And other stuff</p>
+                            <p>And all other stuff</p>
+                            <p style="padding: 10px;">{{post.description}}</p>
+                            <a href="{{post.live_link}}">{{post.live_link}}</a>
+                        </div>                       
+                    </div>
+                </div>
+                
+            </div>
+
         </div>
     
         <!-- My communities and projects-->
