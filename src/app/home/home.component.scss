@@ -1,0 +1,51 @@
+.top-com {
+    border: solid gray 0.02em;
+    margin-top: 10px; 
+    height: 20vh;
+    width: 90%;
+    background: rgb(255, 255, 255);
+}
+.top-com-heading {
+  margin-left: 40px;
+  margin-top: 20px;
+  padding:5px;
+  font-weight: bold;
+}
+
+#outer {    
+    width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;    
+}
+  
+  #left-button {
+    float: left;
+    width: 30px;
+    text-align: center;
+  }
+  
+  #right-button {
+    float: left;
+    width: 30px;
+    text-align: center;
+  }
+  
+  a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: red;
+  }
+  
+  #inner:first-child {
+    margin-left: 0;
+  }
+  
+  label {
+    margin-left: 10px;
+  }
+  
+  .hide {
+    display: none;
+  }
+ 
