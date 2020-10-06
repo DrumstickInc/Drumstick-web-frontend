@@ -4,170 +4,184 @@
 <!--Navbar-->
 <app-navbar></app-navbar>
 
-<div class="container-fluid" style="background: rgba(245, 245, 245, 0.562);">
+<div class="container-fluid" style="background: #dadada8f; height: 125vh;">
     <div class="row" >
-    <div class="col">
-        <div class="container top-com">
-            <h4 class="top-com-heading">Top Communities</h4>
-        </div>
-    </div>
-    <div class="col">
-        <div class="container" style="height: 20vh; width: 90%; background-color: #7e93a7bd; margin-top: 10px;">
-            <h5>Trending Communities:...........</h5>
-            <!-- Communities loop start-->
-            <div id="elem">
-                <label>
-                  <input type="radio" />View</label>
-                <label>
-                  <input type="radio" />All</label>
-                <label>
-                  <input type="radio" />New</label>
-                <label>
-                  <input type="radio" />Unread</label>
-                <label>
-                  <input type="radio" />Favorites</label>
-                <label>
-                  <input type="radio" />Bulk Print</label>
-                <label>
-                  <input type="radio" />Bulk Save</label>
-                <label>
-                  <input type="radio" />Save Library</label>
-            </div>                          
-            <!-- Communities loop end-->            
-        </div>
-    </div>
-    </div>
-    <div class="row" style="margin-top: 30px;">   
-    <!-- Notifications and News Section-->
-    <div class="col">
-        <div class="container" style="height: 40vh; width:90%; margin-bottom: 20px;">
- 
-            <p> Notifications:.................</p>
-            <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
-                <!-- Loop notifications -->                             
-                <li style="height: 20px; list-style: none; margin-top: 3px;">
-                    <div class="row">
-                        <div class="col"><!-- empty column--></div>
-                        <div class="col-md-10">
-                            <img src="http://disrupt-africa.com/wp-content/uploads/2015/01/Moringa-School-logo-2.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                            <p style="display: inline-block;padding:0 7px;">Moringa alumni </p>                                                                               
-                        </div>
-                        <div class="col"><!-- empty column--></div>
-                    </div>                   
-               </li>
-               <hr>
-               <!-- End loop-->                                   
-            </div>
- 
-            <p>News:..................</p>
-            <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
-                <!-- Loop relevant news -->             
-                <li style="height: 20px; list-style: none; margin-top: 3px;">
-                    <div class="row">
-                        <div class="col"><!-- empty column--></div>
-                        <div class="col-md-10">
-                            <img src="http://disrupt-africa.com/wp-content/uploads/2015/01/Moringa-School-logo-2.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                            <p style="display: inline-block;padding:0 7px;">DevsReddit </p>                                                                               
-                        </div>
-                        <div class="col"><!-- empty column--></div>
-                    </div>                   
-                </li>
-                <hr>
-                <!-- End loop-->                                   
-            </div>
- 
-            <p>Ad:.................</p>
-            <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
-
-            </div>
-        </div>
-    </div>
- 
-    <!-- Feed section -->
-    <div class="col-md-6" style="margin-top: 20px;">
-        <div class="container">
-            <p>Posts:.........................</p>
-            <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
-                <style>
-                    #fullpost {
-                        outline: solid 0.02em orange;
-                        display: none;                        
-                    }
-                </style>              
-                <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
-                    <div class="row" style="height: 40px;">                       
-                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                            <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                        </p>
-                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
-                    </div>
-                    <div class="row" style="background: #d3dae2;">
-                        <p style="padding: 10px;">{{post.description}}</p>
-                    </div>
-                </div>
+        <div class="col">
+            <h4 class="top-com-heading" style="color: #08DD80;">Top Communities</h4>
+            <div class="container top-com">
             
-                <div class="container" id="fullpost" (click)='minimisepost(true)'>
-                    <div class="row" style="height: 40px;">
-                    
-                        <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
-                            <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
-                        </p>
-                        <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
-                    </div>
-                    <div class="row" style="background: #d3dae2; height: 30vh;">
-                        <div class="container">
-                            <h5> Full post</h5>
-                            <p>Some other stuff</p>
-                            <p>And other stuff</p>
-                            <p>And all other stuff</p>
-                            <p style="padding: 10px;">{{post.description}}</p>
-                            <a href="{{post.live_link}}">{{post.live_link}}</a>
-                        </div>                       
-                    </div>
-                </div>
-            </div>
-        </div>       
-    </div>
-  
-    <!-- My communities and projects-->
-    <div class="col">
-        <div class="container" style="height: 40vh; width:85%;">
-  
-            <p>My Communities:..............</p>
-            <div class="contaner-fluid" style="height:30vh; border: solid #acacac 0.02em;"> 
-                <!-- Loop user communities -->             
-                <li style="height: 20px; list-style: none; margin-top: 3px;">
-                    <div class="row">
-                        <div class="col"><!-- empty column--></div>
-                        <div class="col-md-10">
-                            <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                            <p style="display: inline-block;padding:0 7px;">DjangoDevs</p>                                                                               
-                        </div>
-                        <div class="col"><!-- empty column--></div>
-                    </div>                   
-                </li>
-                <hr>
-                <!-- End loop-->                                                   
-            </div>
-  
-            <p>My projects:...............</p>
-            <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;"> 
-                <!-- Loop user projects -->             
-                <li style="height: 20px; list-style: none; margin-top: 3px;">
-                    <div class="row">
-                        <div class="col"><!-- empty column--></div>
-                        <div class="col-md-10">
-                            <img src="https://www.pngitem.com/pimgs/m/121-1217811_reddit-logo-head-white-icon-png-reddit-transparent.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                            <p style="display: inline-block;padding:0 7px;">DevsReddit</p>                                                                               
-                        </div>
-                        <div class="col"><!-- empty column--></div>
-                    </div>                   
-                </li>
-                <hr>
-                <!-- End loop-->                                   
+        </div>
+        </div>
+        <div class="col">
+            <h4 class="top-com-heading" style="color: #FD7F20;">Trending Communities</h4>
+            <div class="container top-com">
+
+                <!-- Communities loop start-->
+                <div id="elem">
+                    <label>
+                      <input type="radio" />View</label>
+                    <label>
+                      <input type="radio" />All</label>
+                    <label>
+                      <input type="radio" />New</label>
+                    <label>
+                      <input type="radio" />Unread</label>
+                    <label>
+                      <input type="radio" />Favorites</label>
+                    <label>
+                      <input type="radio" />Bulk Print</label>
+                    <label>
+                      <input type="radio" />Bulk Save</label>
+                    <label>
+                      <input type="radio" />Save Library</label>
+                </div>                          
+                <!-- Communities loop end-->            
             </div>
         </div>
-    </div>   
+    </div>
+    <div class="row">           
+        <div class="col" style="margin-top: 50px;">            
+            <div class="container" style="height: 40vh; width:95%; margin-bottom: 20px;">                                        
+                <!-- News Section-->
+                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em; background: white;"> 
+                    <div class="container-fluid" style="background:#08DD80;">
+                        <h5 style="color: white; padding:10px">News</h5>
+                    </div>                
+                    <!-- Loop news -->                             
+                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                        <div class="row">
+                            <div class="col"><!-- empty column--></div>
+                            <div class="col-md-10">
+                                <img src="http://disrupt-africa.com/wp-content/uploads/2015/01/Moringa-School-logo-2.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
+                                <p style="display: inline-block;padding:0 7px;">Moringa alumni </p>                                                                               
+                            </div>
+                            <div class="col"><!-- empty column--></div>
+                        </div>                   
+                   </li>
+                   <hr>
+                   <!-- End loop-->                                   
+                </div>
+                
+                <!-- Notifications Section-->
+                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em; background: white; margin-top: 20px;"> 
+                    <div class="container-fluid" style="background:#FD7F20;">
+                        <h5 style="color: white; padding:10px">Notifications</h5>
+                    </div>                
+                    <!-- Loop relevant notifications -->             
+                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                        <div class="row">
+                            <div class="col"><!-- empty column--></div>
+                            <div class="col-md-10">
+                                <img src="http://disrupt-africa.com/wp-content/uploads/2015/01/Moringa-School-logo-2.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
+                                <p style="display: inline-block;padding:0 7px;">DevsReddit </p>                                                                               
+                            </div>
+                            <div class="col"><!-- empty column--></div>
+                        </div>                   
+                    </li>
+                    <hr>
+                    <!-- End loop-->                                   
+                </div>
+                                            
+            </div>
+        </div>
+ 
+        <!-- Feed section -->
+        <div class="col-5" style="margin-top: 20px;">
+            <div class="container">
+                <p>Posts:.........................</p>
+                <div class="container" *ngFor='let post of posts' style="height: 65vh;">            
+                    <style>
+                        #fullpost {
+                            outline: solid 0.02em orange;
+                            display: none;                        
+                        }
+                    </style>              
+                    <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
+                        <div class="row" style="height: 40px;">                       
+                            <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                                <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </p>
+                            <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                        </div>
+                        <div class="row" style="background: #d3dae2;">
+                            <p style="padding: 10px;">{{post.description}}</p>
+                        </div>
+                    </div>
+                
+                    <div class="container" id="fullpost" (click)='minimisepost(true)'>
+                        <div class="row" style="height: 40px;">
+                        
+                            <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
+                                <img src="https://www.uokpl.rs/fpng/f/28-282189_profile-icon-vector.png" style="width: 30px; height: 30px; border-radius: 50%;">
+                            </p>
+                            <p style="display: inline-block;margin-top: 10px; padding: 0 7px;"> Username </p>
+                        </div>
+                        <div class="row" style="background: #d3dae2; height: 30vh;">
+                            <div class="container">
+                                <h5> Full post</h5>
+                                <p>Some other stuff</p>
+                                <p>And other stuff</p>
+                                <p>And all other stuff</p>
+                                <p style="padding: 10px;">{{post.description}}</p>
+                                <a href="{{post.live_link}}">{{post.live_link}}</a>
+                            </div>                       
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    
+        <!-- My communities and projects-->
+        <div class="col" style="margin-top: 50px;">
+            <div class="container" style="height: 40vh; width:85%;"> 
+
+                <!-- My communities-->
+                <div class="contaner-fluid" style="height:30vh; border: solid #acacac 0.02em; background: white;"> 
+                    <div class="container-fluid" style="background:#08DD80;">
+                        <h5 style="color: white; padding:10px">My communities</h5>
+                    </div>                
+                    <!-- Loop user communities -->             
+                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                        <div class="row">
+                            <div class="col"><!-- empty column--></div>
+                            <div class="col-md-10">
+                                <img src="https://i7.pngguru.com/preview/10/113/180/django-web-development-web-framework-python-software-framework-django-thumbnail.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
+                                <p style="display: inline-block;padding:0 7px;">DjangoDevs</p>                                                                               
+                            </div>
+                            <div class="col"><!-- empty column--></div>
+                        </div>                   
+                    </li>
+                    <hr>
+                    <!-- End loop-->                                                   
+                </div>
+                
+                <!-- My projects-->
+                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;background: white;margin-top: 20px;"> 
+                    <div class="container-fluid" style="background:#FD7F20;">
+                        <h5 style="color: white; padding:10px">Notifications</h5>
+                    </div>                
+                    <!-- Loop user projects -->             
+                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                        <div class="row">
+                            <div class="col"><!-- empty column--></div>
+                            <div class="col-md-10">
+                                <img src="https://www.pngitem.com/pimgs/m/121-1217811_reddit-logo-head-white-icon-png-reddit-transparent.png" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
+                                <p style="display: inline-block;padding:0 7px;">DevsReddit</p>                                                                               
+                            </div>
+                            <div class="col"><!-- empty column--></div>
+                        </div>                   
+                    </li>
+                    <hr>
+                    <!-- End loop-->                                   
+                </div>
+
+                <!-- About -->
+                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;background: #08dd8148;margin-top: 20px; text-align: center; padding:10px"> 
+                    <h6 style="font-weight: bold;">About</h6>
+                    <p style="color:#8C8A82;"><span style="font-weight: bold; color: #FD7F20;">Drumstick</span> is a platform that allows developers with common interest to form communities and share their work. You're able to form teams and recruit developers to work on a project</p>
+                </div>
+            </div>
+        </div>   
   
     </div>
 </div>
