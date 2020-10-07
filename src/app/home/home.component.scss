@@ -30,12 +30,7 @@
     width: 30px;
     text-align: center;
   }
-  
-  a {
-    text-decoration: none;
-    font-weight: bolder;
-    color: red;
-  }
+    
   
   #inner:first-child {
     margin-left: 0;
@@ -48,9 +43,65 @@
   .hide {
     display: none;
   }
-  .circle {
-    height: 35px;
-    width: 35px;
-    background-color: red;
+  .post_head {
+    padding-left: 25px;
+    padding-top: 15px;
+    color: #FD7F20;
+    font-weight: bold;
+  }
+  .github_icon {
+    height: 37px; 
+    width: 37px; 
+    margin-top: 10px;        
+    display: inline-block;
+    text-align: right;
+  }
+
+  .deployed_icon {
+    height: 28px; 
+    width: 28px;     
     border-radius: 50%;
+    display: inline-block;
+    text-align: right;
+  }
+  .post_description {
+    padding: 10px 40px;
+    text-align: center;
+    margin-top: -15px;
+  }
+  .digits {
+    color: #FD7F20;
+    font-size: 15px;
+  }
+  .likes {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+  }
+  .comments {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+  }
+  .share {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+  }
+  .post_info {    
+    margin-left: 75%;
+  }
+  .post_community {
+    display: inline-block;
+    color: #08DD80;      
+    font-size: 15px;
+  }
+  .bullet {
+    color: gray;
+    display: inline-block;
+  }
+  .time_stamp {
+    display: inline-block;
+    color: #FD7F20; 
+    font-size: 15px;   
   }
