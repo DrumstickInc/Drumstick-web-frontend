@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+}
+
+.sidebar {
+    height: 100%;
+    width: 50vh;
+    position: fixed;
+    z-index: 1;
+    left: 3%;
+    overflow-x: hidden;
+    text-align: center;
+    .search-bar input {
+        background-image: url('/assets/search.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position-x: 8%;
+        background-size: 18px;
+        text-align: center;
+        height: 50px;
+        border: 1px solid #08DD80;
+        border-radius: 30px;
+    }
+    .search-bar input:focus {
+        border: 1px solid #FD7F20;
+        border-radius: 30px;
+        outline: none;
+        color: #08DD80;
+    }
+    .guidelines,
+    .connect,
+    .similar {
+        border: 2px solid black;
+        .header {
+            padding: 2%;
+        }
+    }
+    .guidelines .header {
+        background-color: #08DD80;
+    }
+    .connect {
+        padding-bottom: 1%;
+        background-color: rgba(8, 221, 128, 0.14);
+        .links {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    .similar {
+        .community {
+            background-color: #eee;
+            text-align: left;
+            padding-left: 2%;
+            padding-top: 2%;
+            display: flex;
+            justify-content: left;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            p {
+                font-weight: bold;
+                padding-top: 1%;
+            }
+        }
+        .header {
+            background-color: #FD7F20;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+p {
+    font-size: 15px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 1.5%;
+}
+
+// Community info
+.community-section {
+    margin-left: 50vh;
+    text-align: center;
+    position: relative;
+    .images img {
+        margin-left: 3%;
+    }
+    .images .logo img {
+        border-radius: 100%;
+        position: absolute;
+        height: 140px;
+        top: 140px;
+        left: 200px;
+        border: 3px solid white;
+    }
+    .details {
+        margin-top: 2%;
+        margin-left: 37%;
+        margin-right: 20%;
+        text-align: left;
+        .about {
+            display: flex;
+            justify-content: space-between;
+            .textarea {
+                h4 {
+                    font-weight: bold;
+                }
+            }
+            .button {
+                padding-top: 5%;
+                button {
+                    flex-direction: row;
+                    background: white;
+                    border: 3px solid #08DD80;
+                    border-radius: 50%;
+                    a {
+                        color: #08DD80;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// community posts
+.community-posts {
+    border: 1px solid #FD7F20;
+    margin-left: 25%;
+    margin-right: 20%;
+    .post {
+        .header {
+            background-color: #eee;
+            text-align: left;
+            padding-left: 2%;
+            padding-top: 2%;
+            display: flex;
+            justify-content: left;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            p {
+                font-weight: bold;
+                padding-top: 1%;
+            }
+        }
+        .info {
+            .title-section {
+                .details {
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: left;
+                    margin-left: 3%;
+                    margin-right: 3%;
+                    h5 {
+                        font-weight: bold;
+                    }
+                }
+                .images {
+                    text-align: right;
+                    margin-right: 3%;
+                }
+            }
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
