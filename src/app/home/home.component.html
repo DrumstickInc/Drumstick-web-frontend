@@ -102,8 +102,8 @@
                                 <h5 class="post_head">{{post.post_heading}}</h5>
                             </div>
                             <div class="col" style="text-align: right;">                                
-                                    <a class="github_icon" href="{{post.repo_link}}"><img src="/assets/github.png"></a>                                    
-                                    <a href="{{post.repo_link}}"><img class="deployed_icon" src="/assets/deployed.png"></a>                                                                    
+                                <a class="github_icon" href="{{post.repo_link}}"><img src="/assets/github.png"></a>                                    
+                                <a href="{{post.repo_link}}"><img class="deployed_icon" src="/assets/deployed.png"></a>                                                                    
                             </div>
                         </div>
                         <p  class="post_description" >{{post.description}}</p>                        
@@ -175,11 +175,17 @@
                         <h5 style="color: white; padding:10px">My communities</h5>
                     </div>                
                     <!-- Loop user communities -->             
-                    <li style="height: 20px; list-style: none; margin-top: 3px;margin-left: 5px;">                        
-                        <a routerLink="/communities">
-                            <img src="/assets/angular kenya.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                            <p style="display: inline-block;padding:0 7px; color:#08DD80;">Angular Kenya</p>                                                                               
-                        </a>                                                                
+                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                        <div class="row">
+                            <div class="col"><!-- empty column--></div>
+                            <div class="col-md-10">
+                                <a routerLink="/communities">
+                                    <img src="/assets/angular kenya.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
+                                    <p style="display: inline-block;padding:0 7px; color: black;">Angular Kenya</p>                                                                               
+                                </a>                                        
+                            </div>
+                            <div class="col"><!-- empty column--></div>
+                        </div>                   
                     </li>
                     <hr style="width: 95%;">
                     <!-- End loop-->                                                   
