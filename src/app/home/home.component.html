@@ -4,63 +4,139 @@
 <!--Navbar-->
 <app-navbar></app-navbar>
 
-<div class="container-fluid" style="background: #dadada8f; height: 125vh;">
+<div class="container-fluid" style="background: #dadada8f; height: fit-content">
     <div class="row" >
         <div class="col">
-            <h4 class="top-com-heading" style="color: #08DD80;">Top Communities</h4>
+            <h4 class="top-com-heading" style="color: #08DD80;">Top Communities</h4>            
             <div class="container top-com">
-            
-        </div>
+                <ngx-slick-carousel class="carousel top_slider" 
+                        #slickModal="slick-carousel" 
+                        [config]="slide1Config">
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random1.jpg"> 
+                            <p>Devcom</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random2.jpg"> 
+                            <p>UbuntuLovers</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random3.jpg"> 
+                            <p>PythonCrave</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random4.jpg"> 
+                            <p>Devhub</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random5.jpg"> 
+                            <p>ColorfulWorld</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random6.jpg"> 
+                            <p>MobileDev</p>                           
+                        </a>                        
+                    </div>                    
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random7.jpg"> 
+                            <p>Lights</p>                           
+                        </a>                        
+                    </div>                    
+                </ngx-slick-carousel>                
+            </div>
         </div>
         <div class="col">
             <h4 class="top-com-heading" style="color: #FD7F20;">Trending Communities</h4>
             <div class="container top-com">
-
-                <!-- Communities loop start-->
-                <div id="elem">
-                    <label>
-                      <input type="radio" />View</label>
-                    <label>
-                      <input type="radio" />All</label>
-                    <label>
-                      <input type="radio" />New</label>
-                    <label>
-                      <input type="radio" />Unread</label>
-                    <label>
-                      <input type="radio" />Favorites</label>
-                    <label>
-                      <input type="radio" />Bulk Print</label>
-                    <label>
-                      <input type="radio" />Bulk Save</label>
-                    <label>
-                      <input type="radio" />Save Library</label>
-                </div>                          
-                <!-- Communities loop end-->            
+                <ngx-slick-carousel class="carousel top_slider" 
+                        #slickModal="slick-carousel" 
+                        [config]="slide2Config">
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random9.jpg"> 
+                            <p>phpgeeks</p>                           
+                        </a>                        
+                    </div>                    
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/angular kenya.jpg"> 
+                            <p>Angular Kenya</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random10.jpg"> 
+                            <p>Keyboardwarriors</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random11.jpg"> 
+                            <p>code lovers</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random12.jpg"> 
+                            <p>Devops</p>                           
+                        </a>                        
+                    </div>
+                    <div ngxSlickItem  class="slide"> <!-- *ngFor="let slide of slides"-->                        
+                        <a class="items" routerLink="/communities">
+                            <img src="/assets/random13.jpg"> 
+                            <p>The Gang</p>                           
+                        </a>                        
+                    </div>                                        
+                </ngx-slick-carousel>                
             </div>
         </div>
     </div>
+    
     <div class="row">       
         <!-- News and notifications-->    
-        <div class="col" style="margin-top: 50px;">            
+        <div class="col" style="margin-top: 50px; height: fit-content; background: rgba(216, 4, 4, 0.932);">            
             <div class="news" style="height: 40vh; margin-bottom: 20px;">                                        
                 <!-- News Section-->
-                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em; background: white;"> 
+                <div class="contaner-fluid" style="height:25vh; max-height:25vh; overflow-y: hidden; border: solid #acacac 0.02em; background: white;position: relative;"> 
                     <div class="container-fluid" style="background:#08DD80;">
                         <h5 style="color: white; padding:10px">News</h5>
                     </div>                
                     <!-- Loop news -->                             
-                    <li style="height: 20px; list-style: none; margin-top: 3px; margin-left: 10px;">                                                                                
+                    <li style="height: 20px; list-style: none; margin-left: 10px; margin-top: -5px; height: fit-content;">                                                                                
                         <img src="assets/kayla_news.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
                         <p style="display: inline-block;padding:0 7px; color: gray;"><span style="font-weight: bold;color: black;">Kayla</span> mentioned you in a post, <span style="color: #08DD80;"> Devcom</span> </p>                                                                               
                         <p style="text-align: right; color: #FD7F20; font-size: 13px;margin-top: -10px; padding-right: 15px;">49 mins</p>
-                        <hr style="width: 95%;margin-top: -18px;">
-                    </li>
-                   
-                   <!-- End loop-->                                   
+                        <hr style="width: 95%;margin-top: -18px;">    
+                    </li>                    
+                                                                                
+                    <!-- End loop-->                                   
+
+                    <!-- More-->
+                    <div class="more" style="position: absolute; bottom:0; color: #FD7F20;text-align: center; background: linear-gradient(0deg, #c3c3c3 0%, #ffffff8d 52%, #ffffff00 100%);width: 100%; height: 35px;" >
+                        <a routerLink="/communities"><p style="left: 45%; margin-top: 15px; color: #FD7F20;">&#8226; &#8226; &#8226;</p></a>
+                    </div>                   
                 </div>
                 
                 <!-- Notifications Section-->
-                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em; background: white; margin-top: 20px;"> 
+                <div class="contaner-fluid" style="height:25vh; max-height: 25vh; overflow-y: hidden; border: solid #acacac 0.02em; background: white; margin-top: 20px; position: relative;"> 
                     <div class="container-fluid" style="background:#FD7F20;">
                         <h5 style="color: white; padding:10px">Notifications</h5>
                     </div>                
@@ -72,15 +148,19 @@
                         <hr style="width: 95%;margin-top: -18px;">
                     </li>                    
                     <!-- End loop-->                                   
-                </div>
-                                            
+
+                    <!-- More-->
+                    <div class="more" style="position: absolute; bottom:0; color: #FD7F20;text-align: center; background: linear-gradient(0deg, #c3c3c3 0%, #ffffff8d 52%, #ffffff00 100%);width: 100%; height: 35px;" >
+                        <a routerLink="/communities"><p style="left: 45%; margin-top: 15px; color: #FD7F20;">&#8226; &#8226; &#8226;</p></a>
+                    </div>                   
+                </div>                                            
             </div>
         </div>
  
         <!-- Feed section -->
-        <div class="col-6" style="margin-top: 40px;">
+        <div class="col-6" style="margin-top: 40px; background: #FD7F20;">
                            
-            <div class="container-fluid" *ngFor='let post of posts' style="height: 65vh;">            
+            <div class="container-fluid" *ngFor='let post of posts' style="height: 63vh;">            
                 <style>
                     #fullpost {
                         outline: solid 0.02em orange;
@@ -108,8 +188,7 @@
                         </div>
                         <p  class="post_description" >{{post.description}}</p>                        
                         <hr style="width: 90%;margin-top: -20px;">
-                        <div class="post_actions" style="text-align: center; width: 100%;height: 40px; margin-top: -18px;">                        
-                            <p style="display: inline-block;padding-right: 20px;"><span class="digits">20</span><img class="likes" src="/assets/iconfinder_jee-04_2239656.png">like</p>
+                        <div class="post_actions" style="text-align: center; width: 100%;height: 40px; margin-top: -18px;">                                                    
                             <p style="display: inline-block;padding-left: 20px;"><span class="digits">20</span><img class="comments" src="assets/iconfinder_jee-69_2180661.png">comment</p>
                             <p style="display: inline-block;padding-left: 40px;"><img class="share" src="assets/iconfinder_jee-03_2239659.png">share</p>
                             <p style="display: inline-block;padding-left:50px;" class="post_community">Devcom</p>
@@ -146,10 +225,10 @@
                             <li style="display: inline-block;">Js</li>
                         </ul>
                         <p  class="post_description" >{{post.description}}</p>
-                        <div class="image">
-                            <img  style="width:100%; height: 400px;" src="/assets/stackoverflow.png">
-                        </div>                        
-                        <hr style="width: 90%;margin-top: -20px;">
+                        
+                        <div class="container" style="background:linear-gradient(0deg, #ffffff00 0%, #ffffff62 53%, #ffffff73 100%), url('/assets/stackoverflow.png');  background-size:contain; background-repeat: no-repeat; width: 500px; height: 27vh;"></div> 
+                        
+                        <hr style="width: 90%;">
                         <div class="post_actions" style="text-align: center; width: 100%;height: 40px; margin-top: -18px;">                        
                             <p style="display: inline-block;padding-right: 20px;"><span class="digits">20</span><img class="likes" src="/assets/iconfinder_jee-04_2239656.png">like</p>
                             <p style="display: inline-block;padding-left: 20px;"><span class="digits">20</span><img class="comments" src="assets/iconfinder_jee-69_2180661.png">comment</p>
@@ -166,54 +245,63 @@
         </div>
     
         <!-- My communities and projects-->
-        <div class="col" style="margin-top: 50px;">
-            <div class="comm" style="height: 40vh;"> 
+        <div class="col" style="margin-top: 50px; height: fit-content; background: #08DD80;">
+            <div class="comm"> 
 
                 <!-- My communities-->
-                <div class="contaner-fluid" style="height:30vh; border: solid #acacac 0.02em; background: white;"> 
+                <div class="contaner-fluid" style="height:30vh; max-height:30vh; overflow-y: hidden;overflow-x: hidden; border: solid #acacac 0.02em; background: white; position: relative;"> 
                     <div class="container-fluid" style="background:#08DD80;">
                         <h5 style="color: white; padding:10px">My communities</h5>
                     </div>                
                     <!-- Loop user communities -->             
-                    <li style="height: 20px; list-style: none; margin-top: 3px;">
+                    <li style="height: fit-content; list-style: none; margin-top: -5px;">
                         <div class="row">
                             <div class="col"><!-- empty column--></div>
-                            <div class="col-md-10">
+                            <div class="col-md-10">                                
                                 <a routerLink="/communities">
-                                    <img src="/assets/angular kenya.jpg" style="width: 32px; height: 32px; border-radius: 50%; display: inline-block; padding: 0;">
-                                    <p style="display: inline-block;padding:0 7px; color: black;">Angular Kenya</p>                                                                               
+                                    <img src="/assets/angular kenya.jpg" style="width: 45px; height: 45px; border-radius: 50%; display: inline-block; padding: 0;">
+                                    <p style="display: inline-block;padding:0 7px; color: #08DD80;">Angular Kenya</p>                                                                               
                                 </a>                                        
                             </div>
                             <div class="col"><!-- empty column--></div>
                         </div>                   
                     </li>
-                    <hr style="width: 95%;">
-                    <!-- End loop-->                                                   
+                    <hr style="width: 95%;">                    
+                    <!-- End loop-->        
+                    
+                    <!-- More-->
+                    <div class="more" style="position: absolute; bottom:0; color: #FD7F20;text-align: center; background: linear-gradient(0deg, #c3c3c3 0%, #ffffff8d 52%, #ffffff00 100%);width: 100%; height: 35px;" >
+                        <a routerLink="/communities"><p style="left: 45%; margin-top: 15px; color: #FD7F20;">&#8226; &#8226; &#8226;</p></a>
+                    </div>                   
                 </div>
                 
                 <!-- My projects-->
-                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;background: white;margin-top: 20px;"> 
+                <div class="contaner-fluid" style="height:25vh; max-height:25vh; overflow-y: hidden; border: solid #acacac 0.02em;background: white;margin-top: 20px; position: relative;"> 
                     <div class="container-fluid" style="background:#FD7F20;">
                         <h5 style="color: white; padding:10px">My Projects</h5>
                     </div>                
                     <!-- Loop user projects -->             
-                    <li style="height: 20px; list-style: none; margin-top: 3px; margin-left: 10px;">                                                                        
+                    <li style="height: fit-content; list-style: none; margin-top: 3px; margin-left: 10px;">                                                                        
                         <img src="assets/project_icon.png" style="width: 20px; height: 20px; display: inline-block; padding: 0;margin-top: -10px;">
                         <h6 style="display: inline-block;padding:0 7px;color:#FD7F20;font-size: 19px; font-weight: bold;">Drumstick</h6> 
                         <p style="color:grey; font-size: 13px;padding:0 20px;margin-top: -7px; margin-left: 5px;">A web application to assist developers link up to do projects</p>                                                    
                         <hr style="width: 95%; margin-top: -10px;">
                     </li>
-                    
-                    <!-- End loop-->                                   
-                </div>
 
-                <!-- About -->
-                <div class="contaner-fluid" style="height:25vh; border: solid #acacac 0.02em;background: #08dd8148;margin-top: 20px; text-align: center; padding:10px"> 
-                    <h6 style="font-weight: bold;">About</h6>
-                    <p style="color:#8C8A82;"><span style="font-weight: bold; color: #FD7F20;">Drumstick</span> is a platform that allows developers with common interest to form communities and share their work. You're able to form teams and recruit developers to work on a project</p>
+                    
+                    <!-- End loop-->       
+                    
+                    <!-- More-->
+                    <div class="more" style="position: absolute; bottom:0; color: #FD7F20;text-align: center; background: linear-gradient(0deg, #c3c3c3 0%, #ffffff8d 52%, #ffffff00 100%);width: 100%; height: 35px;" >
+                        <a routerLink="/communities"><p style="left: 45%; margin-top: 15px; color: #FD7F20;">&#8226; &#8226; &#8226;</p></a>
+                    </div>                   
                 </div>
+                
             </div>
         </div>   
   
     </div>
 </div>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
