@@ -1,1 +1,97 @@
-<h1> Profile page</h1>
+<app-navbar></app-navbar>
+<div class="container-fluid" style="background: #dadada8f; height: fit-content">
+    <div class="row">
+        <div class="col-md sidebar">            
+            <h5 class="sidenavs">Home</h5>
+            <h6 class="sidenavs" style="background-color: tomato;">Profile</h6>
+            <h6 class="sidenavs">My Communities</h6>
+            <h6 class="sidenavs">Notifications</h6>
+            <h6 class="sidenavs">Projects</h6>
+        </div>
+        <div class="col-md-9">
+            <div class="row" style="margin-top: 21px;">
+                <div class="col-md-3" style="text-align: center;">
+                    <img class="prof-pic" src="/assets/random10.jpg">
+                    <h1 class="user"> Username</h1>
+                    <h4 class="profession"> Mobile Developer</h4>
+                    <h5 class="email"> Usernamedrummer@mail.com</h5>                    
+                    <ul class="socials">
+                        <li><a href="httpls://twitter.com"><img class="twitter" src="/assets/twitter.png"></a></li>
+                        <li><a href="httpls://github.com"><img class="github" src="/assets/github.png"></a></li>
+                        <li><a href="httpls://github.com"><img class="github" src="/assets/linkedin.png"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md" style="text-align: center;">
+                    <img class="mowiki-icon" src="/assets/mowiki.png">
+                    <div class="container mowiki">
+                        <h5><span class="keyword">[Descriptive phrase]</span> is the phrase that comes to mind when I think about <span class="keyword">[name]</span>.
+                            I've had the pleasure of knowing <span class="keyword">[name]</span> for <span class="keyword"></span>[length of time], during which <span class="keyword">[description of your working relationship]</span>.
+                            Above all, I was impressed with <span class="keyword"></span>[name]'s ability to <span class="keyword">[description of what makes person really stand out]</span>. And, ofcourse, his/her <span class="keyword">[personalitu trait]</span>. 
+                            <span class="keyword">[Name]</span> would be a true asset for any positions requiring <span class="keyword">[1-2 skills needed for position]</span> and comes with my heartfelt recommendation."
+                        </h5>
+                    </div>            
+                </div>
+                <div class="col-md-1"></div>
+            </div> 
+            <div class="row">
+                <h6 class="review-heading">What they say about you</h6>                
+
+                <div class="container-fluid" style="margin-left: 15px; height: 190px;">
+                    <ngx-slick-carousel class="carousel top_slider" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" >
+                        <div ngxSlickItem class="review-slot"> 
+                            <div class="card review">
+                                <div class="row" style="padding:3px;">
+                                    <div class="col-md-1" style="text-align: center;">
+                                        <img src="/assets/random1.jpg">   
+                                    </div>
+                                    <div class="col">
+                                        <h6>username1</h6>                                 
+                                    </div>
+                                </div>                                
+                                <p>Here is my review about this girl. She's smart, pretty and most of all, she writes code. </p>
+                            </div>
+                        </div>
+                        <div ngxSlickItem class="review-slot">
+                            <div class="card review">
+                                <div class="row" style="padding:3px;">
+                                    <div class="col-md-1" style="text-align: center;">
+                                        <img src="/assets/random8.jpg">   
+                                    </div>
+                                    <div class="col">
+                                        <h6>username2</h6>                                 
+                                    </div>
+                                </div>                                
+                                <p>Here is my  another review about this dude. He's cool mahn and mastered code. </p>
+                            </div>
+                        </div>
+                        <div ngxSlickItem class="review-slot"> 
+                            <div class="card review">
+                                <div class="row" style="padding:3px;">
+                                    <div class="col-md-1" style="text-align: center;">
+                                        <img src="/assets/random4.jpg">   
+                                    </div>
+                                    <div class="col">
+                                        <h6>username3</h6>                                 
+                                    </div>
+                                </div>                                
+                                <p>Review on this bona fied developer. Kung fu on that code.</p>
+                            </div>
+                        </div>
+                        <div ngxSlickItem class="review-slot">
+                            <div class="card review">
+                                <img src="/assets/random13.jpg">                                 
+                                <h6>username4</h6>                               
+                                <p>if you're still reading this, clearly you're idle. How about we play among us then, good idea right </p>
+                            </div>
+                        </div>
+                    </ngx-slick-carousel>                
+                </div>
+            </div>           
+        </div>
+        <div class="col"></div>
+    </div>    
+
+</div>

@@ -112,7 +112,7 @@
     
     <div class="row">       
         <!-- News and notifications-->    
-        <div class="col" style="margin-top: 50px; height: fit-content; background: rgba(216, 4, 4, 0.932);">            
+        <div class="col" style="margin-top: 50px; height: fit-content;">            
             <div class="news" style="height: 40vh; margin-bottom: 20px;">                                        
                 <!-- News Section-->
                 <div class="contaner-fluid" style="height:25vh; max-height:25vh; overflow-y: hidden; border: solid #acacac 0.02em; background: white;position: relative;"> 
@@ -158,18 +158,12 @@
         </div>
  
         <!-- Feed section -->
-        <div class="col-6" style="margin-top: 40px; background: #FD7F20;">
+        <div class="col-6" style="margin-top: 40px;">
                            
-            <div class="container-fluid" *ngFor='let post of posts' style="height: 63vh;">            
-                <style>
-                    #fullpost {
-                        outline: solid 0.02em orange;
-                        display: none;                        
-                    }
-                </style>              
+            <div class="container-fluid" *ngFor='let post of posts' style="height: 63vh; max-height: 62.5vh; overflow-y: auto;">                            
 
                 <!-- Short post-->
-                <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.02em orange;">
+                <div class="container" id="shortpost" (click)='expandpost(true)' style="outline: solid 0.005em #acacac; margin-top: 20px;">
                     <div class="row" style="height: 45px;">                       
                         <p style="display: inline-block;margin-top: 7px; padding: 0 7px;">
                             <img src="https://images.unsplash.com/photo-1601348589944-1fd013316557?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=tyler-nix-i_ZNBXr7JxQ-unsplash.jpg" style="width: 35px; height: 35px; border-radius: 50%;">
@@ -226,7 +220,9 @@
                         </ul>
                         <p  class="post_description" >{{post.description}}</p>
                         
-                        <div class="container" style="background:linear-gradient(0deg, #ffffff00 0%, #ffffff62 53%, #ffffff73 100%), url('/assets/stackoverflow.png');  background-size:contain; background-repeat: no-repeat; width: 500px; height: 27vh;"></div> 
+                        <div class="row" style=" width: 100%;height: fit-content;">
+                            <img style="width: 100%; margin-left: 15px;" src="/assets/stackoverflow.png">
+                        </div>
                         
                         <hr style="width: 90%;">
                         <div class="post_actions" style="text-align: center; width: 100%;height: 40px; margin-top: -18px;">                        
@@ -239,13 +235,13 @@
                         </div>                                               
                     </div>
                 </div>
-                
+                                
             </div>
 
         </div>
     
         <!-- My communities and projects-->
-        <div class="col" style="margin-top: 50px; height: fit-content; background: #08DD80;">
+        <div class="col" style="margin-top: 50px; height: fit-content;">
             <div class="comm"> 
 
                 <!-- My communities-->
