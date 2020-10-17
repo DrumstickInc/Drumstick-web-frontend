@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
+import { SinglecommunityComponent } from './singlecommunity/singlecommunity.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'profile', component: ProfileComponent},
   { path: 'communities', component: CommunitiesComponent},
+  { path: 'singlecommunity', component: SinglecommunityComponent}
 ];
 
 @NgModule({

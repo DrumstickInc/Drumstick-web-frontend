@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { CommunitiesComponent } from './communities/communities.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SinglecommunityComponent } from './singlecommunity/singlecommunity.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     LoginComponent,
     SignupComponent,
     CommunitiesComponent,
-    NavbarComponent
+    NavbarComponent,
+    SinglecommunityComponent
   ],
   imports: [
     BrowserModule,
