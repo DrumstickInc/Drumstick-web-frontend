@@ -1,187 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-* {
-    box-sizing: border-box;
+.sidebar {
+    background: white;
+    text-align: center;
+    width: 400px;    
 }
 
-body {
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+.sidenavs {
+    padding:20px 0;   
+    margin-left: -15px; 
+    margin-right: -15px;     
+    margin-top: -5px;
+}
+
+.sidenavs-active {
+    padding:20px 0;  
+    margin-top: -5px; 
+    margin-left: -15px; 
+    margin-right: -15px; 
+    background-color: #ff6347;    
+}
+
+.sidenavs-active a {
+    color: white;
+    font-weight: bold;
+}
+
+.sidenavs:hover,.sidenavs:active,.sidenavs:focus {
+    background: #ff634733;    
+
+    a {
+        color: tomato;
+    }
+}
+
+.sidenavs a {
     color: black;
 }
 
-.main {
-    width: 100%;    
-}
-.sidebar {
-    height: 100%;
-    width: 90%;   
-    z-index: 1;   
-    overflow-x: hidden;
-
-    p {
-        text-align: center;
-    }
-    .search-bar input {
-        background-image: url('/assets/search.png');
-        background-repeat: no-repeat;
-        background-position: left;
-        background-position-x: 8%;
-        background-size: 18px;
-        text-align: center;
-        height: 40px;
-        width: 250px;
-        border: 1px solid #08DD80;
-        border-radius: 30px;
-    }
-    .search-bar input:focus {
-        border: 1px solid #FD7F20;
-        border-radius: 30px;
-        outline: none;
-        color: #08DD80;
-    }
-    .guidelines,
-    .connect,
-    .similar {
-        border: solid gray 0.02em;
-        .header {
-            padding: 2%;
-            color: white;
-        }
-    }
-    .guidelines .header {
-        background-color: #08DD80;
-    }
-    .connect {
-        padding-bottom: 1%;
-        background-color: rgba(8, 221, 128, 0.14);
-        .links {
-            display: flex;
-            justify-content: space-evenly;
-        }
-    }
-    .similar {
-        .community {
-            background-color: #eee;
-            text-align: left;
-            padding-left: 2%;
-            padding-top: 2%;
-            display: flex;
-            justify-content: left;
-            img {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-            }
-            p {
-                font-weight: bold;
-                padding-top: 1%;
-            }
-        }
-        .header {
-            background-color: #FD7F20;
-        }
-    }
+.sidebar h5 {
+    margin-top: 65%;
 }
 
-a {
-    text-decoration: none;
-    color: #000;
+.communities {
+    margin:0 45px;
+    padding: 10px;
 }
 
-p {
+.communities h4 {
+    color: #FD7F20;        
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.communities .unread h4 {
+    font-weight: bolder;   
+}
+
+.communities .list {
+    max-height: 75vh;
+    overflow-y: scroll;
+    list-style: none;
+}
+
+.communities img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display:  inline-block;
+}
+.communities .row {
+    width: 100%;
+}
+
+
+.communities p {
+    margin-left: 20px;
+    width: 790px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: grey;
+    text-overflow: ellipsis;
+}
+
+.communities .unread p {
+    color: black;
+}
+
+.username {
+    color:#FD7F20;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.time {
+    margin-left: 95%;
+    color:#FD7F20;
+}
+
+.superscript {
+    color: white;
+    padding: 2px 5px;
+    background:#08DD80;
+    border-radius: 5px;
     font-size: 15px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 1.5%;
+    margin-left: 5px;    
 }
 
-// Community info
-.community-section {    
-    text-align: center;   
-    max-height: 90vh;
-    overflow-y: scroll;    
-    .images .logo img {
-        border-radius: 100%;
-        margin-top: -80px;        
-        margin-left: -430px;
-        height: 140px;                
-        border: 3px solid white;
-        display: inline-block;
-    }
-    .details {
-        
-        margin-left: 37%;
-        margin-right: 20%;
-        text-align: left;
-        display: inline-block;
-        .about {
-            display: flex;            
-            justify-content: space-between;
-            .textarea {
-                h4 {
-                    font-weight: bold;
-                }
-            }
-            .button {
-                padding-top: 5%;
-                button {
-                    flex-direction: row;
-                    background: white;
-                    border: 3px solid #08DD80;
-                    border-radius: 50%;
-                    a {
-                        color: #08DD80;
-                    }
-                }
-            }
-        }
-    }
-}
-
-// community posts
-.community-posts {
-    border: 1px solid #FD7F20;
-    margin-left: 25%;
-    margin-right: 20%;
-    .post {
-        .header {
-            background-color: #eee;
-            text-align: left;
-            padding-left: 2%;
-            padding-top: 2%;
-            display: flex;
-            justify-content: left;
-            img {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-            }
-            p {
-                font-weight: bold;
-                padding-top: 1%;
-            }
-        }
-        .info {
-            .title-section {
-                .details {
-                    display: flex;
-                    justify-content: space-between;
-                    text-align: left;
-                    margin-left: 3%;
-                    margin-right: 3%;
-                    h5 {
-                        font-weight: bold;
-                    }
-                }
-                .images {
-                    text-align: right;
-                    margin-right: 3%;
-                }
-            }
-        }
-        .footer {
-            display: flex;
-            justify-content: space-around;
-        }
-    }
-}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+ }

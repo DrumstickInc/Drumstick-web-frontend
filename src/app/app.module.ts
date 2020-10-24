@@ -11,6 +11,8 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SinglecommunityComponent } from './singlecommunity/singlecommunity.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SinglecommunityComponent } from './singlecommunity/singlecommunity.comp
     SignupComponent,
     CommunitiesComponent,
     NavbarComponent,
-    SinglecommunityComponent
+    SinglecommunityComponent,
+    NotificationsComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
