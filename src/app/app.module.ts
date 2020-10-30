@@ -13,6 +13,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SinglecommunityComponent } from './singlecommunity/singlecommunity.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,14 @@ import { ProjectsComponent } from './projects/projects.component';
     NavbarComponent,
     SinglecommunityComponent,
     NotificationsComponent,
-    ProjectsComponent
+    ProjectsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
