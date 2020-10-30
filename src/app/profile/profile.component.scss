@@ -1,29 +1,19 @@
-.prof-pic {
-    height: 250px;
-    width: 250px;
-    margin-top: 20%;    
-    padding: 10px;
-    border-radius: 50%;    
-}
-
-.user {
-    font-weight: bold;
-    color:#FD7F20;
-    padding-top: 15px;
-}
-
-.profession {
-    padding-top: 5px;    
-}
-
-.email {
-    padding-top: 5px;
-}
-
 .sidebar {
     background: white;
     text-align: center;
     width: 400px;    
+}
+
+.prof-icon {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;    
+    padding: 10px;
+    border-radius: 50%;    
+}
+
+.side-user {
+    color: #FD7F20;    
 }
 
 .sidenavs {
@@ -59,8 +49,51 @@
 }
 
 .sidebar h5 {
-    margin-top: 65%;
+    margin-top: 25%;
 }
+
+
+.profile {    
+    background: #ffffff;
+}
+
+.background {
+    margin-left:-15px;    
+    width: 103%;
+    height: 90px;
+    object-fit: cover;   
+}
+
+.prof-pic {
+    height: 230px;
+    width: 230px;           
+    margin-top: -55px;    
+    margin-left: 15%;
+    border-radius: 50%;
+    border: solid white .3em;       
+}
+
+.user {
+    font-weight: bold;
+    color:#FD7F20;
+    padding-top: 10px;
+}
+
+.profession {        
+    color: #08DD80;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.bio {
+    color: gray;
+}
+
+.email {
+    color: gray;
+    margin-left: 25px;
+}
+
 
 .mowiki {
     text-align: center;
@@ -68,9 +101,29 @@
     margin-top: 10px;
 }
 
+.communities {
+    width: fit-content;
+    background:#FD7F20;
+    padding:10px 20px;        
+    margin: 10px 20px;
+    color: white;
+}
+
+.projects {
+    width: fit-content;
+    background:#08DD80;
+    padding:10px 40px;        
+    margin: 10px 20px;
+    color: white;
+}
+
+.number {
+    background: white;
+    color: gray;    
+}
+
 .mowiki-icon {
     border-radius: 50%;
-    margin-top: 70px;  
 }
 
 .keyword {
