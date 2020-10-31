@@ -99,7 +99,7 @@ p {
 .community-section {    
     text-align: center;   
     max-height: 90vh;
-    overflow-y: scroll;    
+    overflow-y: auto;    
 
     .background {
         width: 100%;
@@ -140,6 +140,7 @@ p {
 }
 
 // community posts
+
 .community-posts {
     border: 1px solid #FD7F20;
     margin-left: 30px;
@@ -171,8 +172,11 @@ p {
                     margin-left: 3%;
                     margin-right: 3%;
                     h5 {
+                        margin-top: 5px;
                         font-weight: bold;
+                        color: #FD7F20;
                     }
+                    
                 }
                 .images {
                     text-align: right;
@@ -180,6 +184,10 @@ p {
                 }
             }
         }
+        .img img {
+            width: 100%;
+        }
+
         .footer {
             display: flex;
             justify-content: space-around;
