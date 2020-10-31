@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { Post } from '../post';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -32,9 +33,21 @@ export class HomeComponent implements OnInit {
         big.style.display = "block";           
     }
 }            
+
   constructor() { }
   
-  ngOnInit(): void {
+  slide1Config = {"slidesToShow": 6, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
+  slide2Config = {"slidesToShow": 6, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5030}; 
+
+  ngOnInit() {
+    $(document).ready(function(){
+      $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      });
+    });
   }
 
 }

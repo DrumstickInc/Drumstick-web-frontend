@@ -9,6 +9,11 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { CommunitiesComponent } from './communities/communities.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SinglecommunityComponent } from './singlecommunity/singlecommunity.component';
+import { NotificationsComponent } from './notifications/notifications.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,11 +23,17 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     SignupComponent,
     CommunitiesComponent,
-    NavbarComponent
+    NavbarComponent,
+    SinglecommunityComponent,
+    NotificationsComponent,
+    ProjectsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlickCarouselModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

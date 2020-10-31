@@ -1,161 +1,259 @@
-<!--Navbar-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 <app-navbar></app-navbar>
-
-<div class="row main">
-    <div class="col"></div>
-    <div class="col-md-4">
-        <div class="sidebar">
-            <div class="search-bar">
-                <input type="text" placeholder="search drumstick">
-            </div>
-
-            <br>
-
-            <div class="guidelines">
-                <div class="header">
-                    <h5>Community guidelines</h5>
-                </div>
-
-                <p>
-                    <b>Be polite</b>, friendly, welcoming, and generally a nice person.
-                </p>
-                <hr>
-                <p>
-                    <b>Be respectful and constructive</b> with your communication to fellow members.
-                </p>
-                <hr>
-                <p>
-                    <b>Be collaborative.</b> We can learn a lot from each other.
-                </p>
-            </div>
-
-
-            <br>
-
-            <div class="connect">
-                <div class="header">
-                    <h5 style="text-align: center; color: black;">Connect with us</h5>
-                </div>
-
-                <div class="links">
-                    <a href="#"> <img src="/assets/twitter.png" alt="" width="45%"></a>
-                    <a href="#"> <img src="/assets/github.png" alt=""> </a>
-                </div>
-            </div>
-
-
-            <br>
-            <div class="similar">
-                <div class="header">
-                    <h5>Similar communities</h5>
-                </div>
-
-                <div class="community">
-                    <img src="/assets/profile.jpg" alt="avatar">
-                    <p>Andela Kenya</p>
-                </div>
-                <div class="community">
-                    <img src="/assets/profile.jpg" alt="avatar">
-                    <p>GDG Nairobi</p>
-                </div>
-            </div>
+<div class="container-fluid" style="background: #dadada8f; height:100%;">
+    <div class="row">
+        <div class="col-md sidebar">            
+            <h5 class="sidenavs"><a routerLink="/">Home</a></h5>
+            <h6 class="sidenavs"><a href="/profile">Profile</a></h6>
+            <h6 class="sidenavs-active"><a routerLink="/communities">Communities</a></h6>
+            <h6 class="sidenavs"><a routerLink="/notifications">Notifications</a></h6>
+            <h6 class="sidenavs"><a routerLink="/projects">Projects</a></h6>
         </div>
-    </div>
+        <div class="col-md-9">
+            <div class="row" style="margin-top: 21px;">
+                <div class="col-md-7 communities">
+                    <h4 class="heading">Communities<sup class="superscript">2</sup></h4>
+                    <hr>
+                    <ul class="container list">
+                        <!-- loop user communities-->
 
+                        <li><a href="/singlecommunity">
+                            <div class="row unread" >
+                                <div class="col-sm-1">
+                                    <img src="/assets/angular kenya.jpg">
+                                </div>
+                                <div class="col">
+                                    <h4>Angular Kenya</h4>
+                                    <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
+                                    <span class="time">3mins</span>
+                                </div>
+                            </div>                                                       
+                            <hr>
+                        </a></li>
+                        <li>
+                            <div class="row unread" >
+                                <div class="col-sm-1">
+                                    <img src="/assets/random1.jpg">
+                                </div>
+                                <div class="col">
+                                    <h4>Devcom</h4>
+                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                    <span class="time">58mins</span>
+                                </div>
+                            </div>                                                       
+                            <hr>
+                        </li>
+                        <li>
+                            <div class="row" >
+                                <div class="col-sm-1">
+                                    <img src="/assets/random5.jpg">
+                                </div>
+                                <div class="col">
+                                    <h4>ColorfulWorld</h4>
+                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                    <span class="time">2hrs</span>
+                                </div>
+                            </div>                                                       
+                            <hr>
+                        </li>
+                        <li>
+                            <div class="row" >
+                                <div class="col-sm-1">
+                                    <img src="/assets/random11.jpg">
+                                </div>
+                                <div class="col">
+                                    <h4>code lovers</h4>
+                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                    <span class="time">6hrs</span>
+                                </div>
+                            </div>                                                       
+                            <hr>
+                        </li>
+                        <li>
+                            <div class="row" >
+                                <div class="col-sm-1">
+                                    <img src="/assets/random8.jpg">
+                                </div>
+                                <div class="col">
+                                    <h4>Timers</h4>
+                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                    <span class="time">8hrs</span>
+                                </div>
+                            </div>                                                       
+                            <hr>
+                        </li>
+                        
+                        <!--- End loop-->
+                    </ul>
+                </div>                
+                <div class="col-md" style="text-align: center;">
+                    <div class="container-fluid" style="background: white;width: 120%; border: #d8d8d8 0.01em solid; padding: 10px;">                        
+                        <div class="row">
+                            <div class="col-md-5">
+                                <form id="app-cover">
+                                    <div id="select-box">
+                                        <input type="checkbox" id="options-view-button">
+                                        <div id="select-button" class="brd">
+                                            <div id="selected-value">
+                                                <span>Filter</span>
+                                            </div>
+                                            <div id="chevrons">
+                                                    <i class="fas fa-chevron-up"></i>
+                                                    <i class="fas fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div id="options">
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="angular">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="angular">
+                                                    <i class="fab fa-python"></i>
+                                                    <span class="label">Python</span>
+                                                    <span class="opt-val">Python</span>
+                                            </div>
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="dribbble">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="dribbble">
+                                                    <i class="fab fa-java"></i>
+                                                    <span class="label">Java</span>
+                                                    <span class="opt-val">Java</span>
+                                            </div>
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="behance">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="behance">
+                                                    <i class="fas fa-gem"></i>
+                                                    <span class="label">Ruby</span>
+                                                    <span class="opt-val">Ruby</span>
+                                            </div>
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="hackerrank">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+                                                    <i class="fab fa-html5"></i>
+                                                    <span class="label">HTML</span>
+                                                    <span class="opt-val">HTML</span>
+                                            </div>
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="stackoverflow">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
+                                                    <i class="fab fa-js"></i>
+                                                    <span class="label">JavaScript</span>
+                                                    <span class="opt-val">JavaScript</span>
+                                            </div>
+                                            <div class="option">
+                                                    <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                    <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                    <i class="fab fa-cuttlefish c"></i>
+                                                    <span class="label">C -Language</span>
+                                                    <span class="opt-val">C -Language</span>
+                                            </div>
+                                            <div class="option">
+                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                <i class="fab fa-cuttlefish cplusplus">++</i>
+                                                <span class="label">C++ -Language</span>
+                                                <span class="opt-val">C++ -Language</span>
+                                            </div>
+                                            <div class="option">
+                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                <i class="fab fa-cuttlefish csharp">#</i>
+                                                <span class="label">C# -Language</span>
+                                                <span class="opt-val">C# -Language</span>
+                                            </div>                                                                                        
+                                            <div class="option">
+                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                <i class="fab fa-php"></i>
+                                                <span class="label">php</span>
+                                                <span class="opt-val">php</span>
+                                            </div>
+                                            <div class="option">
+                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                <i class="fas fa-database"></i>
+                                                <span class="label">SQL</span>
+                                                <span class="opt-val">SQL</span>
+                                            </div>
+                                            <div class="option">
+                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                <i class="fab fa-swift"></i>
+                                                <span class="label">Swift</span>
+                                                <span class="opt-val">Swift</span>
+                                            </div>
+                                            <div id="option-bg"></div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col">
+                                <span style="display: inline-block; font-size: 20px;">| </span> 
+                                <input class="search" type="input" placeholder="search" style="width: 90%;display: inline-block; margin-left: 10px;">
+                                <i class="fas fa-search"></i>                                                                
+                            </div>
+                        </div>                                                
+                    </div>                             
+                    <ul class="com-list">
+                        <li data-toggle="modal" data-target="#com-modal">
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                            
+                        </li>
+                        <li class="noma">
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                            <span class="tooltip">
+                                tooltip in
+                            </span>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>
+                        <li>
+                            <img src="/assets/random8.jpg"> 
+                            <p>Timer</p>
+                        </li>                        
+                    </ul>
 
-    <div class="col-md-7">
-        <div class="community-section">                           
-            <div class="images">
-                <img src="/assets/alc.jpeg" alt="">
-                <div class="logo">
-                    <img src="/assets/angular kenya.jpg" alt="">
-                </div>
-            </div>
-
-            
-            <div class="details">
-                <div class="about">
-                    <div class="textarea">
-                        <h4>Angular Kenya</h4>
-                        <p>We 'ng serve' the Kenyan tech community to become proficient Angular developers</p>
-                    </div>
-                    <div class="button">
-                        <button><a href="#"> JOIN </a></button>
-                    </div>
-                </div>
-            </div>                      
-            <hr>
-            <div class="community-posts">
-                <div class="post">
-                    <div class="header">
-                        <img src="/assets/profile.jpg" alt="avatar">
-                        <p>Pew Pew</p>
-                    </div>
-                    <div class="info">
-                        <div class="title-section">
-                            <div class="details">
-                                <h5>Project1.9-7.14</h5>
-                                <div>
-                                    <img src="/assets/github.png" alt='github'>
+                    <!-- Modal -->
+                    <div class="modal fade" id="com-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                  ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
-                            <div class="images">
-                                <img src="/assets/open.png" alt="open source">
-                                <img src="/assets/money.png" alt="paid">
-                            </div>
-                            <!-- <button>Interested</button> -->
-                        </div>
-                        <p>Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular. In need of one angular dev.</p>
-                    </div>
-                    <div class="img">
-                        <img src="/assets/screenshot.png" alt="screenshot">
-                    </div>
-                    <hr>
-                    <div class="footer">
-                        <div class="comments">
-                            <img src="/assets/comment.png" alt="">
-                            <a href="#">comments</a>
-                        </div>
-                        <div class="share">
-                            <img src="/assets/share.png" alt="">
-                            <a href="#">share</a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <br>
-
-            <div class="community-posts">
-                <div class="post">
-                    <div class="header">
-                        <img src="/assets/profile.jpg" alt="avatar">
-                        <p>John Skeet</p>
-                    </div>
-                    <div class="info">
-                        <div class="title-section">
-                            <div class="details">
-                                <h5>Stack overflow</h5>
-                                <div>
-                                    <img src="/assets/github.png" alt='github'>
-                                </div>
-                            </div>
-                        </div>
-                        <p>Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
-                    </div>
-                    <hr>
-                    <div class="footer">
-                        <div class="comments">
-                            <img src="/assets/comment.png" alt="">
-                            <a href="#">comments</a>
-                        </div>
-                        <div class="share">
-                            <img src="/assets/share.png" alt="">
-                            <a href="#">share</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+                </div>                
+            </div>             
+        </div>        
+        <div class="col"></div>
+    </div>        
 </div>
