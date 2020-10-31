@@ -100,19 +100,20 @@ p {
     text-align: center;   
     max-height: 90vh;
     overflow-y: scroll;    
+
+    .background {
+        width: 100%;
+    }
+
     .images .logo img {
         border-radius: 100%;
         margin-top: -80px;        
-        margin-left: -430px;
         height: 140px;                
         border: 3px solid white;
         display: inline-block;
     }
-    .details {
-        
-        margin-left: 37%;
-        margin-right: 20%;
-        text-align: left;
+    .group-details {                
+        text-align: left;        
         display: inline-block;
         .about {
             display: flex;            
@@ -141,8 +142,8 @@ p {
 // community posts
 .community-posts {
     border: 1px solid #FD7F20;
-    margin-left: 25%;
-    margin-right: 20%;
+    margin-left: 30px;
+    margin-right: 25px;
     .post {
         .header {
             background-color: #eee;
