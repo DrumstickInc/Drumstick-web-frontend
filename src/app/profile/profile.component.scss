@@ -76,22 +76,21 @@
 .user {
     font-weight: bold;
     color:#FD7F20;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 .profession {        
-    color: #08DD80;
-    margin-left: 20px;
-    font-weight: bold;
+    color: #08DD80;    
 }
 
 .bio {
-    color: gray;
+    color: #aca9a9;
 }
 
 .email {
     color: gray;
     margin-left: 25px;
+    padding-bottom: 10px;
 }
 
 
@@ -101,29 +100,65 @@
     margin-top: 10px;
 }
 
-.communities {
-    width: fit-content;
-    background:#FD7F20;
-    padding:10px 20px;        
-    margin: 10px 20px;
-    color: white;
+.communities {    
+    color:#FD7F20;    
+    display: inline-block;
+    font-weight: bold;
 }
 
 .projects {
     width: fit-content;
-    background:#08DD80;
-    padding:10px 40px;        
-    margin: 10px 20px;
-    color: white;
+    color:#08DD80;    
+    display: inline-block;    
+    font-weight: bold;
+    margin-left: 10px;
 }
 
-.number {
-    background: white;
+.number {    
     color: gray;    
 }
 
+.mowiki-header {
+    display: inline-block;
+}
+
 .mowiki-icon {
-    border-radius: 50%;
+    margin-left: 8%;
+    border-radius: 50%;    
+    display: inline-block;
+}
+
+.mowiki-menu {    
+    position: absolute;
+    background: #E8E8E8;
+    margin-top: -15px;
+    margin-left: -10px;
+    height: 33px;
+    padding: 5px;
+    display: none;    
+    border-radius: 20px 5px;
+}
+
+.mo-item {    
+    display: inline-block;
+}
+
+.mowiki {
+    width: 80%;
+    margin-top: -30px;
+}
+
+.fa-edit {
+    margin-left: 15px;
+    padding: 0 10px;
+    color:#FD7F20;
+    font-size: 20px;    
+}
+
+.fa-times {
+    padding:0 10px;    
+    font-size: 15px;   
+    color: gray;
 }
 
 .keyword {
@@ -170,7 +205,7 @@
 .socials {
     list-style: none;
     margin-left: -50px;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .socials li {

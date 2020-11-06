@@ -21,6 +21,22 @@ export class ProfileComponent implements OnInit {
         autoplaySpeed: 2000,
       });
     });
+
+    $(document).ready(function(){
+      $(".mowiki-icon").click(function(){
+        $(".mowiki-menu").animate({
+            width:"toggle"
+        });
+      });
+    });
+
+    $(document).ready(function(){
+      $(".fa-times").click(function(){
+        $(".mowiki-menu").animate({
+            width:"toggle"
+        });
+      });
+    });
   }
 
 }
