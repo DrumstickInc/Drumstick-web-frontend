@@ -1,4 +1,109 @@
-.top-com {
+//Background
+.background {
+  background: #f0f0f08f;  
+  height: fit-content;
+  max-height: 93.9vh; 
+  overflow-y: scroll;
+}
+
+//Base container
+.C1 {
+  border: solid #e0e0e0 0.01em;
+  margin-top: 2%;
+  background: white;
+  border-radius: 3px;
+}
+
+//Communities slider container
+.com {
+  height: 100px;
+  padding: 0 10px;
+}
+
+//slider styling
+.top_slider {
+  display: flex;
+}
+
+//slider items
+.top_slider .items {
+  width: fit-content; 
+  text-align: center; 
+  display: inline-block; 
+  padding:10px 5px;
+}
+
+//communities icons
+.top_slider .items img {
+  width: 70px; 
+  height: 70px; 
+  border-radius: 50%;
+  margin-top: -4px;
+}
+
+//communities title
+.top_slider .items p {  
+  color: #615353;    
+  font-size: 15px;
+  width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+//Make post card
+.mp {
+  height: 50px;
+  width: 60%;
+  background: #ffffff;  
+
+    img {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;  
+      margin-top: 2%;
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    input {
+      display: inline-block;
+      margin-left: 25px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom:solid #cfcfcf 0.05em;
+      background: transparent;
+    }    
+
+    .fa-photo-video {
+      display: inline-block;        
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .fa-link {
+      display: inline-block;        
+      margin-top: 10px;
+      margin-left: 15px;
+      color: solid grey 0.05em;
+    }
+    
+}
+
+//post card
+.post {
+  min-height: 200px;
+  height: fit-content;  
+}
+
+
+
+
+
+
+/*.top-com {
     border: solid gray 0.02em;
     margin-top: 10px; 
     height: 18vh;
@@ -12,52 +117,6 @@
   font-weight: bold;
 }
 
-.top_slider {
-  display: flex;
-}
-
-.top_slider .items {
-  width: fit-content; 
-  text-align: center; 
-  display: inline-block; 
-  padding:10px;
-}
-
-.top_slider .items img {
-  width: 110px; 
-  height: 110px; 
-  border-radius: 50%;
-  margin-top: -5px;
-}
-
-.top_slider .items p {  
-  color: #615353;  
-  margin-left: -10px;
-}
-
-#outer {    
-    width: 250px;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;    
-}
-  
-  #left-button {
-    float: left;
-    width: 30px;
-    text-align: center;
-  }
-  
-  #right-button {
-    float: left;
-    width: 30px;
-    text-align: center;
-  }
-    
-  
-  #inner:first-child {
-    margin-left: 0;
-  }
   
   label {
     margin-left: 10px;
@@ -140,4 +199,4 @@
     background-color: red;
     border-radius: 50%;
     display: inline-block;
-  }
+  }*/

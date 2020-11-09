@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
   
-  slide1Config = {"slidesToShow": 6, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
+  slide1Config = {"slidesToShow": 7, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
   slide2Config = {"slidesToShow": 6, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5030}; 
 
   ngOnInit() {
