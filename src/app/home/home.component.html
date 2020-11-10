@@ -4,7 +4,25 @@
 
 <div class="container-fluid background">            
     <div class="row">
-        <div class="col"></div>
+        <div class="col">
+            <div class="row">
+                <!-- sidepanel-->
+                <div class="col sidepanel">
+
+                    <div id="mySidepanel" class="sidebar">  
+                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
+                        <h5 class="sidenavs-active"><a routerLink="/">Home</a></h5>
+                        <h6 class="sidenavs"><a routerLink="/profile">Profile</a></h6>
+                        <h6 class="sidenavs"><a routerLink="/communities">Communities</a></h6>
+                        <h6 class="sidenavs"><a routerLink="/notifications">Notifications</a></h6>
+                        <h6 class="sidenavs"><a routerLink="/projects">Projects</a></h6>
+                    </div>
+
+                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
         <div class="col-md-8" style="height: fit-content;">
             <div class="row">
 

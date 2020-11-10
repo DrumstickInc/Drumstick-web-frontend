@@ -2,9 +2,84 @@
 .background {
   background: #f0f0f08f;  
   height: fit-content;
-  max-height: 93.9vh; 
+  max-height: 93vh; 
   overflow-y: scroll;
+  width: 100%;
 }
+
+//Sidepanel
+.sidepanel {    
+  
+  .fa-bars {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background: white; 
+    border-radius: 30%;
+    text-shadow: 2px 2px 3px #ff634733;
+  }
+  .sidebar {
+    background: white;
+    text-align: center;
+    width: 0;    
+    position: fixed;    
+    overflow-x: hidden;
+    z-index: 1;
+    top: 7vh;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: grey;
+  }
+
+  .sidenavs {
+      padding:20px 0;   
+      margin-left: -15px; 
+      margin-right: -15px;     
+      margin-top: -5px;
+      display: block;
+      transition: 0.3s;
+  }
+  
+  .sidenavs-active {
+      padding:20px 0;  
+      margin-top: -5px; 
+      margin-left: -15px; 
+      margin-right: -15px; 
+      background-color: tomato;    
+  }
+  
+  .sidenavs-active a {
+      color: white;
+      font-weight: bold;
+  }
+  
+  .sidenavs:hover,.sidenavs:active,.sidenavs:focus {
+      background: #ff634733;    
+  
+      a {
+          color: tomato;
+      }
+  }
+  
+  .sidenavs a {
+      color: black;
+  }
+  
+  .sidebar h5 {
+      margin-top: 65%;
+  }
+
+}
+  
 
 //Base container
 .C1 {
@@ -64,14 +139,14 @@
       height: 37px;
       border-radius: 50%;  
       margin-top: 2%;
-      margin-left: 20px;
+      margin-left: 5px;
       display: inline-block;
     }
 
     // make post input field
     input {
       display: inline-block;
-      margin-left: 25px;
+      margin-left: 10px;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -83,14 +158,14 @@
     .fa-photo-video {
       display: inline-block;        
       margin-top: 10px;
-      margin-left: 20px;
+      margin-left: 15px;
     }
 
     // link url icon
     .fa-link {
       display: inline-block;        
       margin-top: 10px;
-      margin-left: 15px;
+      margin-left: 10px;
       color: solid grey 0.05em;
     }
     

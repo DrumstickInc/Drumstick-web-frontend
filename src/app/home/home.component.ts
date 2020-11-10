@@ -32,14 +32,22 @@ export class HomeComponent implements OnInit {
     } else {
         big.style.display = "block";           
     }
-}            
+  }
+  
+  openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
 
   constructor() { }
   
   slide1Config = {"slidesToShow": 7, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
   slide2Config = {"slidesToShow": 6, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5030}; 
 
-  ngOnInit() {
+  ngOnInit() {           
     $(document).ready(function(){
       $('.autoplay').slick({
         slidesToShow: 3,
