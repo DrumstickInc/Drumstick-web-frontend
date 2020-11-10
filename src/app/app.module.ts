@@ -14,6 +14,7 @@ import { SinglecommunityComponent } from './singlecommunity/singlecommunity.comp
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SubmitComponent } from './submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SinglecommunityComponent,
     NotificationsComponent,
     ProjectsComponent,
+    SubmitComponent,
 
   ],
   imports: [

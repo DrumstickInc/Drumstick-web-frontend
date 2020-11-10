@@ -1,0 +1,83 @@
+//Background
+.background {
+    background: #f0f0f08f;  
+    height: 100%;
+    max-height: 93.9vh;     
+}
+
+.heading {
+    margin-top: 10%;    
+}
+
+.upload {
+    height: 400px;
+    background-color: #e2e1e18f;
+    border-radius: 5px;    
+}
+
+//navigation 
+.navigation {    
+    height:fit-content;
+    margin: 15% 0;
+    background: white;
+    
+    p {
+        text-align: center;            
+        font-weight: bold;
+    }
+
+    .post {
+       margin-top: 20px; 
+       padding: 10px;
+       width: 119%;
+       margin-left: -15px;
+       border-top: solid #cfcfcf 0.01em;
+       border-right: solid #cfcfcf 0.01em;
+       border-bottom: solid #cfcfcf 0.01em;
+    }
+
+    .project {
+        margin-top: -16px;         
+        padding: 10px;
+        width: 119%;
+        margin-left: -15px;
+        border-bottom: solid #cfcfcf 0.01em;
+        border-right: solid #cfcfcf 0.01em;
+    }
+
+    .media1 {
+        margin-top: -16px;         
+        padding: 10px;
+        width: 119%;
+        margin-left: -15px;
+        border-bottom: solid #cfcfcf 0.01em;
+        border-right: solid #cfcfcf 0.01em;
+    }
+    .poll {
+        margin-top: -16px;         
+        padding: 10px;
+        width: 119%;
+        margin-left: -15px;
+        border-bottom: solid #cfcfcf 0.01em;
+        border-right: solid #cfcfcf 0.01em;
+    }
+
+    .fa-clone {
+        margin-left: -15px;
+        margin-right: 5px;
+    }
+    
+    .fa-project-diagram {
+        margin-right: 5px;
+    }
+
+    .fa-photo-video {
+        margin-right: 5px;
+        margin-left: -10px;
+    }
+
+    .fa-poll-h {
+        margin-right: 5px;
+        margin-left: -25px;
+    }
+}
