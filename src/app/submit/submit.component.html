@@ -1,3 +1,5 @@
+<link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" />
+
 <!--Navbar-->
 <app-navbar></app-navbar>
 
@@ -22,7 +24,31 @@
                                 <p class="poll"><i class="fas fa-poll-h"></i>  Poll</p>
                             </div>
                             <div class="col-9">
+                                <div class="container-fluid submit-area">                                                                                                           
+                                    <select class="form-control community-select" id="inputGroupSelect01">
+                                        <option selected>Choose community...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>                                     
 
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" id="the-title" placeholder="Title" aria-label="Title" maxlength="300" aria-describedby="basic-addon1">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="the-count">
+                                                <span id="current">0</span>
+                                                <span id="maximum">/ 300</span>
+                                            </span>                                        
+                                        </div>                                                                                                                         
+                                    </div>
+                                    <!--<ejs-richtexteditor #toolsRTE id='alltoolRTE' [toolbarSettings]='tools' class="textarea"></ejs-richtexteditor>-->
+                                    <div class="input-group mb-3">
+                                        <textarea name="text" class="textfield" rows="8"  placeholder="Write text..."></textarea>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <button class="btn" type="submit">Post</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>                        
                     </div>

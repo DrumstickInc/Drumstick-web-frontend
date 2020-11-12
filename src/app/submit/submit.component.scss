@@ -11,7 +11,7 @@
 
 .upload {
     height: 400px;
-    background-color: #e2e1e18f;
+    background-color: white;
     border-radius: 5px;    
 }
 
@@ -80,4 +80,48 @@
         margin-right: 5px;
         margin-left: -25px;
     }
+}
+
+//submit area 
+.submit-area {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+//community select field
+.community-select {
+    width: 50%;
+    margin-top: 10px;
+}
+
+//title input field
+
+#the-title {
+    border-right: none;
+    margin-top: 15px;
+}
+
+#the-count {    
+    float: right;
+    padding: 0 0.3em 0 0.1em ;
+    font-size: 0.675rem;
+    background: white;   
+    border-left: none;
+    margin-top: 15px;
+
+}
+
+.textfield {
+    margin-top: 15px;    
+    width: 100%;
+    border: solid #d3d3d3 0.01em;
+    padding: 5px 0 5px 5px;
+}
+
+.btn {
+    margin-left: 40%;
+    background-color: orange;
+    color: white;
+    padding: 5px 25px;
 }

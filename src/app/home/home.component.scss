@@ -2,7 +2,7 @@
 .background {
   background: #f0f0f08f;  
   height: fit-content;
-  max-height: 93.9vh; 
+  max-height: 93vh; 
   overflow-y: scroll;
 }
 
@@ -55,7 +55,7 @@
 //Make post card
 .mp {
   height: 50px;
-  width: 60%;
+  width: 70%;
   background: #ffffff;  
 
     //User profile photo
@@ -69,14 +69,15 @@
     }
 
     // make post input field
-    input {
+    .text {
       display: inline-block;
       margin-left: 25px;
-      border-top: none;
+      border-top: none;      
       border-left: none;
       border-right: none;
       border-bottom:solid #cfcfcf 0.05em;
       background: transparent;
+      width: 220px;
     }    
 
     //media icon
