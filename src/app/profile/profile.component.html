@@ -1,132 +1,147 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" style="background: #f0f0f08f; height: fit-content">
+<div class="container-fluid background">
     <div class="row">
-        <div class="col-md sidebar">    
-            <img class="prof-icon" src="/assets/random10.jpg">   
-            <h4 class="side-user"> Username</h4>     
-            <h5 class="sidenavs"><a routerLink="/">Home</a></h5>
-            <h6 class="sidenavs-active"><a routerLink="/profile">Profile</a></h6>
-            <h6 class="sidenavs"><a routerLink="/communities">Communities</a></h6>
-            <h6 class="sidenavs"><a routerLink="/notifications">Notifications</a></h6>
-            <h6 class="sidenavs"><a routerLink="/projects">Projects</a></h6>
+        <!-- side panel column-->
+        <div class="col">    
+            <div class="row">                
+                <div class="col sidepanel">
+                    <div id="mySidepanel" class="sidebar">  
+                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
+                        <img class="prof-icon" src="/assets/random10.jpg">   
+                        <h5 class="side-user"> Username</h5>     
+                        <h6 class="sidenavs"><a routerLink="/">Home</a></h6>
+                        <p class="sidenavs-active"><a routerLink="/profile">Profile</a></p>
+                        <p class="sidenavs"><a routerLink="/communities">Communities</a></p>
+                        <p class="sidenavs"><a routerLink="/notifications">Notifications</a></p>
+                        <p class="sidenavs"><a routerLink="/projects">Projects</a></p>
+                    </div>
+
+                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
+                </div>                
+                <div class="col"></div>
+            </div>                            
         </div>
-        <div class="col-md-9">
+        <div class="col-md-5">
             <div class="row" style="margin-top: 21px;">
-                    <!-- Profile section-->
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col">
-                            <div class="container-fluid profile">
-                                <img class="background" src="/assets/random3.jpg">
-                                <div class="row">
-                                    <div class="col"></div>
-                                    <div class="col-md-3">                                       
+                <!-- Profile section-->
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col">
+                        <div class="container-fluid profile">
+                            <!--cover image-->
+                            <img class="coverimg" src="/assets/random3.jpg">
+                            
+                            <!-- user details -->
+                            <div class="row details">                                    
+                                    <div class="col-md-4" style="text-align: center;">                                       
                                         <img class="prof-pic" src="/assets/random10.jpg">
+                                        <h5 class="user"> Username</h5>
+                                        <p class="profession"> Mobile Developer</p>
                                     </div>
-                                    <div class="col-md-5" style="text-align: center;">
-                                        <h3 class="user"> Username</h3>
-                                        <h6 class="profession"> Mobile Developer</h6>
-                                        <h6 class="email"> Usernamedrummer@mail.com</h6>
-                                        <p class="communities">Communities <span class="number"> 12 </span></p>
-                                        <span style="display: inline-block; padding-left: 5px;">&#8226;</span>
-                                        <p class="projects">Projects <span class="number"> 6 </span></p>                                        
-                                        <p class="bio"> Biobiobiobio bio bio stuff</p>
-                                        
+                                    <div class="col-md-5">
+                                        <p class="bio"> Biobiobiobio bio bio stuff</p>                              
+                                        <p class="email"> Usernamedrummer@mail.com</p>
+                                    </div>                                    
+                                    <!-- socials column-->
+                                    <div class="col">
+                                        <ul class="socials">                                            
+                                            <li><a href="httpls://twitter.com"><img class="twitter" src="/assets/twitter.png"></a></li>
+                                            <li><a href="httpls://github.com"><img class="github" src="/assets/github.png"></a></li>
+                                            <li><a href="httpls://github.com"><img class="linkedin" src="/assets/linkedin.png"></a></li>
+                                        </ul>                    
+                                    </div>                                    
+                            </div>           
+                            
+                            <!-- Moviki section-->                                
+                            <div class="row mowiki">
+                                    <img class="mowiki-icon" src="/assets/mowiki.png">
+                                    <div class="mowiki-header">
+                                        <div class="mowiki-menu">
+                                            <p class="mo-item"><i class="far fa-edit"></i></p>
+                                            <p class="mo-item"><i class="fas fa-times"></i></p>
+                                        </div>
                                     </div>
-                                    <div class="col-md-3"></div>
-                                    <div class="col"></div>
-                                </div>                                
-                                <img class="mowiki-icon" src="/assets/mowiki.png">
-                                <div class="mowiki-header">
-                                    <div class="mowiki-menu">
-                                        <p class="mo-item"><i class="far fa-edit"></i></p>
-                                        <p class="mo-item"><i class="fas fa-times"></i></p>
-                                    </div>
-                                </div>
-                                <div class="container mowiki">
-                                    <p><span class="keyword">[Descriptive phrase]</span> is the phrase that comes to mind when I think about <span class="keyword">[name]</span>.
+                                    <p class="mowiki-text"><span class="keyword">[Descriptive phrase]</span> is the phrase that comes to mind when I think about <span class="keyword">[name]</span>.
                                         I've had the pleasure of knowing <span class="keyword">[name]</span> for <span class="keyword"></span>[length of time], during which <span class="keyword">[description of your working relationship]</span>.
                                         Above all, I was impressed with <span class="keyword"></span>[name]'s ability to <span class="keyword">[description of what makes person really stand out]</span>. And, ofcourse, his/her <span class="keyword">[personalitu trait]</span>. 
                                         <span class="keyword">[Name]</span> would be a true asset for any positions requiring <span class="keyword">[1-2 skills needed for position]</span> and comes with my heartfelt recommendation."
-                                    </p>
-                                    <ul class="socials">                                            
-                                        <li><a href="httpls://twitter.com"><img class="twitter" src="/assets/twitter.png"></a></li>
-                                        <li><a href="httpls://github.com"><img class="github" src="/assets/github.png"></a></li>
-                                        <li><a href="httpls://github.com"><img class="github" src="/assets/linkedin.png"></a></li>
-                                    </ul>                    
-                                </div>                                           
-                            </div>
-
-                        </div>                       
-                    </div>                    
-                <div class="col-md-1"></div>
-                <div class="col-md"></div>
-                <div class="col-md-1"></div>
-            </div> 
-            <div class="row">
-                <h6 class="review-heading">What they say about you</h6>                
-                
-                <div class="container-fluid" style="margin-left: 5%; width:94.5%; height: 190px;">
-                    <ngx-slick-carousel class="carousel top_slider" 
-                        #slickModal="slick-carousel" 
-                        [config]="slideConfig" >
-                        <div ngxSlickItem class="review-slot"> 
-                            <div class="card review">
-                                <div class="row" style="padding:3px;">
-                                    <div class="col-md-1" style="text-align: center;">
-                                        <img src="/assets/random1.jpg">   
-                                    </div>
-                                    <div class="col">
-                                        <h6>username1</h6>                                 
-                                    </div>
-                                </div>                                
-                                <p>Here is my review about this girl. She's smart, pretty and most of all, she writes code. </p>
-                            </div>
-                        </div>
-                        <div ngxSlickItem class="review-slot">
-                            <div class="card review">
-                                <div class="row" style="padding:3px;">
-                                    <div class="col-md-1" style="text-align: center;">
-                                        <img src="/assets/random8.jpg">   
-                                    </div>
-                                    <div class="col">
-                                        <h6>username2</h6>                                 
-                                    </div>
-                                </div>                                
-                                <p>Here is my  another review about this dude. He's cool mahn and mastered code. </p>
-                            </div>
-                        </div>
-                        <div ngxSlickItem class="review-slot"> 
-                            <div class="card review">
-                                <div class="row" style="padding:3px;">
-                                    <div class="col-md-1" style="text-align: center;">
-                                        <img src="/assets/random4.jpg">   
-                                    </div>
-                                    <div class="col">
-                                        <h6>username3</h6>                                 
-                                    </div>
-                                </div>                                
-                                <p>Review on this bona fied developer. Kung fu on that code.</p>
-                            </div>
-                        </div>
-                        <div ngxSlickItem class="review-slot">
-                            <div class="card review">
-                                <div class="row" style="padding:3px;">
-                                    <div class="col-md-1" style="text-align: center;">
-                                        <img src="/assets/random13.jpg">   
-                                    </div>
-                                    <div class="col">
-                                        <h6>username4</h6>                                 
-                                    </div>
-                                </div>                                                                                                                            
-                                <p>if you're still reading this, clearly you're idle. How about we play among us then, good idea right </p>
+                                    </p>                                    
+                            </div> 
+                                                        
+                            <!-- reviews -->
+                            <div class="row">
+                                <h6 class="review-heading">What they say about you</h6>                                                                                        
+                                <div class="container" style="width: 450px;">
+                                    <ngx-slick-carousel class="carousel top_slider" 
+                                        #slickModal="slick-carousel" 
+                                        [config]="slideConfig" >
+                                        <div ngxSlickItem class="review-slot"> 
+                                            <div class="card review">
+                                                <div class="row" style="padding:3px;">
+                                                    <div class="col-md-1" style="text-align: center;">
+                                                        <img src="/assets/random1.jpg">   
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>username1</h6>                                 
+                                                    </div>
+                                                </div>                                
+                                                <p>Here is my review about this girl. She's smart, pretty and most of all, she writes code. </p>
+                                            </div>
+                                        </div>
+                                        <div ngxSlickItem class="review-slot">
+                                            <div class="card review">
+                                                <div class="row" style="padding:3px;">
+                                                    <div class="col-md-1" style="text-align: center;">
+                                                        <img src="/assets/random8.jpg">   
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>username2</h6>                                 
+                                                    </div>
+                                                </div>                                
+                                                <p>Here is my  another review about this dude. He's cool mahn and mastered code. </p>
+                                            </div>
+                                        </div>
+                                        <div ngxSlickItem class="review-slot"> 
+                                            <div class="card review">
+                                                <div class="row" style="padding:3px;">
+                                                    <div class="col-md-1" style="text-align: center;">
+                                                        <img src="/assets/random4.jpg">   
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>username3</h6>                                 
+                                                    </div>
+                                                </div>                                
+                                                <p>Review on this bona fied developer. Kung fu on that code.</p>
+                                            </div>
+                                        </div>
+                                        <div ngxSlickItem class="review-slot">
+                                            <div class="card review">
+                                                <div class="row" style="padding:3px;">
+                                                    <div class="col-md-1" style="text-align: center;">
+                                                        <img src="/assets/random13.jpg">   
+                                                    </div>
+                                                    <div class="col">
+                                                        <h6>username4</h6>                                 
+                                                    </div>
+                                                </div>                                                                                                                            
+                                                <p>if you're still reading this, clearly you're idle. How about we play among us then, good idea right </p>
+                                            </div>
+                                        </div>
+                                    </ngx-slick-carousel> 
+                                </div>    
                             </div>
                         </div>
-                    </ngx-slick-carousel>                
-                </div>
-            </div>           
+                    </div>                       
+                </div>                                                    
+            </div>            
         </div>
+        <div class="col-md-4" style="background: blue;">
+            <h1>projects</h1>
+        </div>         
         <div class="col"></div>
     </div>    
 
 </div>
+
+
+<!-- -->                                

@@ -13,29 +13,8 @@ export class HomeComponent implements OnInit {
   ]
 
   
-  expandpost(complete:boolean) {
-      var big = document.getElementById("fullpost");
-      var small = document.getElementById("shortpost");
-      if (big.style.display === "none") {
-          big.style.display = "block";           
-          small.style.display = "none";           
-      } else {
-          big.style.display = "none";           
-      }
-  }
-  minimisepost(complete:boolean) {
-    var big = document.getElementById("fullpost");
-    var small = document.getElementById("shortpost");
-    if (big.style.display === "block") {
-        big.style.display = "none";           
-        small.style.display = "block";           
-    } else {
-        big.style.display = "block";           
-    }
-  }
-  
   openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
+    document.getElementById("mySidepanel").style.width = "200px";
   }
 
   closeNav() {

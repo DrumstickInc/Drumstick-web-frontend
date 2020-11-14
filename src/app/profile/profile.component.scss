@@ -1,138 +1,208 @@
-.sidebar {
+//Background
+.background {
+    background: #f0f0f08f;  
+    height: fit-content;
+    max-height: 93vh;     
+    width: 100%;
+}
+  
+//////// Sidepanel ////////
+.sidepanel {    
+  
+  .fa-bars {
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background: white; 
+    border-radius: 30%;
+    text-shadow: 2px 2px 3px #ff634733;
+  }
+  .sidebar {
     background: white;
     text-align: center;
-    width: 400px;    
-}
-
-.prof-icon {
+    width: 0;    
+    position: fixed;    
+    overflow-x: hidden;
+    z-index: 1;
+    top: 7vh;
+    left: 0;
+    transition: 0.5s;
+    height: 93vh;
+  }
+  
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: grey;
+  }
+  .prof-icon {
     height: 150px;
     width: 150px;
     margin-top: 50px;    
     padding: 10px;
     border-radius: 50%;    
-}
-
-.side-user {
+  }
+  .side-user {
     color: #FD7F20;    
+  }
+  
+  .sidenavs {
+      padding:10px 0;   
+      margin-left: -15px; 
+      margin-right: -15px;     
+      margin-top: -5px;
+      display: block;
+      transition: 0.3s;
+  }
+  
+  .sidenavs-active {
+      padding:20px 0;  
+      margin-top: -5px; 
+      margin-left: -15px; 
+      margin-right: -15px; 
+      background-color: tomato;    
+  }
+  
+  .sidenavs-active a {
+      color: white;
+      font-weight: bold;
+  }
+  
+  .sidenavs:hover,.sidenavs:active,.sidenavs:focus {
+      background: #ff634733;    
+  
+      a {
+          color: tomato;
+      }
+  }
+  
+  .sidenavs a {
+      color: black;
+  }
+  
+  .sidebar h6 {
+      margin-top: 20%;
+  }
+
 }
 
-.sidenavs {
-    padding:20px 0;   
-    margin-left: -15px; 
-    margin-right: -15px;     
-    margin-top: -5px;
-}
 
-.sidenavs-active {
-    padding:20px 0;  
-    margin-top: -5px; 
-    margin-left: -15px; 
-    margin-right: -15px; 
-    background-color: tomato;    
-}
+//////// profile column ////////
 
-.sidenavs-active a {
-    color: white;
-    font-weight: bold;
-}
-
-.sidenavs:hover,.sidenavs:active,.sidenavs:focus {
-    background: #ff634733;    
-
-    a {
-        color: tomato;
-    }
-}
-
-.sidenavs a {
-    color: black;
-}
-
-.sidebar h5 {
-    margin-top: 25%;
-}
-
-
-.profile {    
-    background: #ffffff;
-}
-
-.background {
+// cover image 
+.coverimg {
     margin-left:-15px;    
-    width: 103%;
+    width: 100%;
     height: 90px;
     object-fit: cover;   
 }
 
+// user details
+
+.details {
+    background: white;
+    border:solid #cfcfcf 0.05em;
+    width: 100%;    
+}
 .prof-pic {
-    height: 230px;
-    width: 230px;           
-    margin-top: -55px;    
-    margin-left: 15%;
-    border-radius: 50%;
+    height: 150px;
+    width: 150px;           
+    margin-top: -85px;        
+    border-radius: 50%;    
     border: solid white .3em;       
 }
 
 .user {
-    font-weight: bold;
+    font-weight: 500px;        
+    margin-top: -20px;     
     color:#FD7F20;
     padding-top: 30px;
+    font-size: 23px;
 }
 
 .profession {        
-    color: #08DD80;    
+    color: #08DD80;           
+    font-weight: 150px;
+    font-size: 14px;
 }
 
 .bio {
     color: #aca9a9;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .email {
+    position: absolute;
     color: gray;
-    margin-left: 25px;
-    padding-bottom: 10px;
+    text-align: center;
+    bottom: -12px;
+    left: 15%;
+    font-size: 14px;
 }
 
+.socials {
+    list-style: none;    
+    margin-top: 20px;
+}
 
-.mowiki {
-    text-align: center;
-    padding: 20px;
+.socials li {    
+    margin: 0 10px;
+}
+
+.twitter {
+    height: 30px;
+    width: 30px;
+}
+
+.github {
+    width: 30px;
     margin-top: 10px;
 }
 
-.communities {    
-    color:#FD7F20;    
+.linkedin {
+    width: 25px;
+    margin-top: 10px;
+}
+
+//////// mowiki section ////////
+.mowiki {
+    background: white;
+    border:solid #cfcfcf 0.05em;
+    text-align: center;    
+    margin-top: 45px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+
+.mowiki-icon {
+    margin-left: 3%;
+    border-radius: 50%;
+    margin-top: -40px;
+    height: 65px; 
+    width: 65px;   
     display: inline-block;
-    font-weight: bold;
-}
-
-.projects {
-    width: fit-content;
-    color:#08DD80;    
-    display: inline-block;    
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-.number {    
-    color: gray;    
-}
+}  
 
 .mowiki-header {
     display: inline-block;
 }
 
-.mowiki-icon {
-    margin-left: 8%;
-    border-radius: 50%;    
-    display: inline-block;
-}
+
 
 .mowiki-menu {    
     position: absolute;
-    background: #E8E8E8;
-    margin-top: -15px;
+    background: #E8E8E8;   
     margin-left: -10px;
+    margin-top: -19px;
     height: 33px;
     padding: 5px;
     display: none;    
@@ -141,11 +211,6 @@
 
 .mo-item {    
     display: inline-block;
-}
-
-.mowiki {
-    width: 80%;
-    margin-top: -30px;
 }
 
 .fa-edit {
@@ -161,8 +226,25 @@
     color: gray;
 }
 
+.mowiki-text {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
 .keyword {
     color: #FD7F20;
+}
+
+
+
+//////// Review section ///////
+
+.review-heading {
+    margin-top: 5px; 
+    margin-left: 10px; 
+    padding: 20px; 
+    display: inline-block; 
+    color: #08DD80;
 }
 
 .review {
@@ -170,28 +252,22 @@
     background: white;
     width: 400px; 
     height: fit-content;   
-    padding: 10px;
+    padding: 5px;
 }
 
 .review-slot {
     margin: 0 10px;
 }
 
-.review-heading {
-    margin-top: 5px; 
-    margin-left: 80px; 
-    padding: 20px; 
-    display: inline-block; 
-    color: #08DD80;
-}
+
 .review img {
     height: 35px;
     width: 35px;
     border-radius: 50%;    
 }
 .review h6 {
-    margin-left: 10px;
-    margin-top: 11px;
+    margin-left: 5px;
+    margin-top: 4px;
     color: #08DD80;
     font-weight: bold;
 }
@@ -202,22 +278,3 @@
     text-align: center;
 }
 
-.socials {
-    list-style: none;
-    margin-left: -50px;
-    margin-top: 5px;
-}
-
-.socials li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.twitter {
-    height: 30px;
-    width: 30px;
-}
-
-.github {
-    width: 30px;
-}

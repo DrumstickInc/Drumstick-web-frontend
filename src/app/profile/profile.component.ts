@@ -10,12 +10,20 @@ export class ProfileComponent implements OnInit {
 
   constructor() { }
 
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
+  openNav() {
+    document.getElementById("mySidepanel").style.width = "200px";
+  }
+
+  closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  
+  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
 
   ngOnInit(){
     $(document).ready(function(){
       $('.autoplay').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
