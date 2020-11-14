@@ -10,7 +10,16 @@
             <h4 class="heading">Post something...</h4>
             <div class="row" style="margin-top: 25px;">
                 <!--Left side-->
-                <div class="col" style="background: red;">
+                <div class="col" style="background: white; height: fit-content; border:  solid #e0e0e0 0.01em;">
+                    <div class="container" style=" padding: 10px;">
+                        <h5>When posting </h5>
+                        <hr>
+                        <p class="guide">1. Show politeness and be friendly.</p>
+                        <p class="guide">2. Respect others.</p>
+                        <p class="guide">3. Share constructive post.</p>
+                        <p class="guide">4. Check for duplicates before.</p>
+                        <p class="guide">5. Beware of community guidelines.</p>
+                    </div>
                 </div>
 
                 <!--right side-->
@@ -21,7 +30,7 @@
                                 <p class="post" id="post"  (click)="showpost()"><i class="fas fa-clone"></i>  Post</p>
                                 <p class="project" (click)="showproject()"><i class="fas fa-project-diagram"></i>  Project</p>
                                 <p class="media1" (click)="showmedia()"><i class="fas fa-photo-video"></i> Media</p>
-                                <p class="poll"><i class="fas fa-poll-h"></i>  Poll</p>
+                                <p class="poll"><i class="fas fa-poll-h"></i>  Pitch</p>
                             </div>
                             <div class="col-10">
                                 <form  class="container-fluid submit-area"> <!--(ngSubmit)='onSubmit()'-->
@@ -47,7 +56,7 @@
                                     <!-- Post option-->
                                     <div class="input-group mb-3" id="post-field">
                                         <!--<angular-editor placeholder="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>-->
-                                        <textarea name="text" class="textfield" rows="8"  placeholder="Write text..."></textarea>
+                                        <textarea name="text" class="textfield" rows="10"  placeholder="Write text..."></textarea>
                                     </div>
 
                                     <!-- Project option-->
