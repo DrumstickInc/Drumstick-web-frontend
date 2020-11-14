@@ -15,7 +15,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
 import { ProjectsComponent } from './projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SubmitComponent } from './submit/submit.component';
-import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule } from '@angular/forms';
+import { SubmitDirective } from './submit/submit.directive';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor'
     NotificationsComponent,
     ProjectsComponent,
     SubmitComponent,
+    SubmitDirective,
 
   ],
   imports: [
@@ -37,7 +40,9 @@ import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor'
     AppRoutingModule,
     SlickCarouselModule,
     FontAwesomeModule,
-    RichTextEditorAllModule
+    AngularEditorModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

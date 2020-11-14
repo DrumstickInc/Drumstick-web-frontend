@@ -6,7 +6,7 @@
 <div class="container-fluid background">            
     <div class="row">
         <div class="col"></div>
-        <div class="col-8">
+        <div class="col-9">
             <h4 class="heading">Post something...</h4>
             <div class="row" style="margin-top: 25px;">
                 <!--Left side-->
@@ -14,17 +14,18 @@
                 </div>
 
                 <!--right side-->
-                <div class="col-8">
+                <div class="col-9">
                     <div class="container-fluid upload">
                         <div class="row">
                             <div class="col navigation">
-                                <p class="post"><i class="fas fa-clone"></i>  Post</p>
-                                <p class="project"><i class="fas fa-project-diagram"></i>  Project</p>
-                                <p class="media1"><i class="fas fa-photo-video"></i> Media</p>
+                                <p class="post" id="post"  (click)="showpost()"><i class="fas fa-clone"></i>  Post</p>
+                                <p class="project" (click)="showproject()"><i class="fas fa-project-diagram"></i>  Project</p>
+                                <p class="media1" (click)="showmedia()"><i class="fas fa-photo-video"></i> Media</p>
                                 <p class="poll"><i class="fas fa-poll-h"></i>  Poll</p>
                             </div>
-                            <div class="col-9">
-                                <div class="container-fluid submit-area">                                                                                                           
+                            <div class="col-10">
+                                <form  class="container-fluid submit-area"> <!--(ngSubmit)='onSubmit()'-->
+                                    <!-- Community selection-->
                                     <select class="form-control community-select" id="inputGroupSelect01">
                                         <option selected>Choose community...</option>
                                         <option value="1">One</option>
@@ -32,6 +33,7 @@
                                         <option value="3">Three</option>
                                     </select>                                     
 
+                                    <!-- Submit title-->
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" id="the-title" placeholder="Title" aria-label="Title" maxlength="300" aria-describedby="basic-addon1">
                                         <div class="input-group-append">
@@ -40,15 +42,82 @@
                                                 <span id="maximum">/ 300</span>
                                             </span>                                        
                                         </div>                                                                                                                         
-                                    </div>
-                                    <!--<ejs-richtexteditor #toolsRTE id='alltoolRTE' [toolbarSettings]='tools' class="textarea"></ejs-richtexteditor>-->
-                                    <div class="input-group mb-3">
+                                    </div>  
+
+                                    <!-- Post option-->
+                                    <div class="input-group mb-3" id="post-field">
+                                        <!--<angular-editor placeholder="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>-->
                                         <textarea name="text" class="textfield" rows="8"  placeholder="Write text..."></textarea>
                                     </div>
+
+                                    <!-- Project option-->
+                                    <div class="input-group mb-3" id="project-field">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col-7">
+                                                <div class="dropzone" appSubmit>
+                                                    <input type="file" #fileDropRef id="fileDropRef" multiple /> <!--(change)="fileBrowseHandler($event.target.files)"-->
+                                                    <i class="fas fa-upload"></i>
+                                                    <h6>Drag and drop project image here</h6>
+                                                    <h6>or</h6>
+                                                    <label for="fileDropRef">Browse for image</label>                                            
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <h6>project link:</h6>
+                                                <div class="input-group input">
+                                                    <div class="input-group-prepend prepend">
+                                                      <span class="input-group-text" id="basic-addon1"><i class="fab fa-github"></i></span>
+                                                    </div>
+                                                    <input type="text" class="form-control githublink" placeholder="github link" aria-label="Githublink" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="input-group input">
+                                                    <div class="input-group-prepend prepend">
+                                                      <span class="input-group-text" id="basic-addon1"><img src="/assets/deployed.png"></span>
+                                                    </div>
+                                                    <input type="text" class="form-control deployedlink" placeholder="deployed link" aria-label="Deployedlink" aria-describedby="basic-addon1">
+                                                </div>
+
+                                                <div class="another" id="additional">
+                                                    <div class="input-group input" >
+                                                        <div class="input-group-prepend prepend">
+                                                          <span class="input-group-text" id="basic-addon1"><i class="fas fa-link"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control anotherlink" placeholder="link ..." aria-label="Anotherlink" aria-describedby="basic-addon1">
+                                                    </div>
+                                                </div>
+
+                                                <p class="addition" id="addition" (click)="addlink()">+</p>
+                                            </div>                                            
+                                        </div>                                            
+                                        <!--<angular-editor placeholder="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>-->
+                                        <textarea name="text" class="textfield" rows="4"  placeholder="Describe your project..."></textarea>                                                                                                                    
+                                    </div>
+
+                                    <!-- Media option-->
+                                    <div class="input-group mb-3" id="media-field">
+                                        <div class="row" style="width: 100%;">
+                                            <div class="col"></div>
+                                            <div class="col-md-7">
+                                                <div class="dropzone" appSubmit>
+                                                    <input type="file" #fileDropRef id="fileDropRef" multiple /> <!--(change)="fileBrowseHandler($event.target.files)"-->
+                                                    <i class="fas fa-upload"></i>
+                                                    <h6>Drag and drop image/video here</h6>
+                                                    <h6>or</h6>
+                                                    <label for="fileDropRef">Browse for image/video</label>                                            
+                                                </div>
+                                            </div>
+                                            <div class="col"></div>                                            
+                                            <!--<angular-editor placeholder="'Enter text here...'" [(ngModel)]="htmlContent"></angular-editor>-->
+                                    <textarea name="text" class="textfield" rows="4"  placeholder="Write text..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!--post button-->
                                     <div class="input-group mb-3">
                                         <button class="btn" type="submit">Post</button>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>                        
                     </div>

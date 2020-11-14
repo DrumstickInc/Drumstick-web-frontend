@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HostListener, Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService, TableService } from '@syncfusion/ej2-angular-richtexteditor';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-submit',
@@ -8,17 +8,30 @@ import { ToolbarService, LinkService, ImageService, HtmlEditorService, TableServ
   styleUrls: ['./submit.component.scss']
 })
 export class SubmitComponent implements OnInit {
+  
+  
+  showpost(){    
+    document.getElementById("post-field").style.display = "block";    
+    document.getElementById("project-field").style.display = "none";
+    document.getElementById("media-field").style.display = "none";  
+  }
 
-  public tools: object = {
-    items: [
-          'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
-          'FontName', 'FontSize', 'FontColor', 'BackgroundColor', '|',
-          'LowerCase', 'UpperCase', '|', 'Undo', 'Redo', '|',
-          'Formats', 'Alignments', '|', 'OrderedList', 'UnorderedList', '|',
-          'Indent', 'Outdent', '|', 'CreateLink','CreateTable',
-          'Image', '|', 'ClearFormat', 'Print', 'SourceCode', '|', 'FullScreen']
-  };
+  showproject(){
+    document.getElementById("project-field").style.display = "block";
+    document.getElementById("post-field").style.display = "none";
+    document.getElementById("media-field").style.display = "none";
+  }
 
+  showmedia(){
+    document.getElementById("media-field").style.display = "block";
+    document.getElementById("post-field").style.display = "none";
+    document.getElementById("project-field").style.display = "none";  
+  }
+
+  addlink(){
+    document.getElementById("additional").style.display ="block";
+    document.getElementById("addition").style.display ="none";
+  }
   constructor() { }
 
   ngOnInit(): void {
@@ -33,6 +46,10 @@ export class SubmitComponent implements OnInit {
     current.text(characterCount);
 
     });
+
+        
   }
+
+  
 
 }
