@@ -6,14 +6,25 @@
 }
 
 .heading {
-    margin-top: 10%;    
+    margin-top: 8%;    
 }
 
 .upload {
-    height: 400px;
+    height: 550px;
     background-color: white;
-    border-radius: 5px;    
+    border-radius: 5px;
+    border:  solid #e0e0e0 0.01em;    
+    padding-top: 20px;
+    margin-bottom: 45px;    
 }
+
+/////// Guidelines section ///////
+
+.guide {
+    font-size: 15px;
+
+}
+
 
 //navigation 
 .navigation {    
@@ -24,6 +35,7 @@
     p {
         text-align: center;            
         font-weight: 550;
+        background: #f3f3f3;
     }
 
     p:hover {
@@ -34,10 +46,7 @@
        margin-top: 20px; 
        padding: 10px;
        width: 119%;
-       margin-left: -15px;
-       border-top: solid #cfcfcf 0.01em;
-       border-right: solid #cfcfcf 0.01em;
-       border-bottom: solid #cfcfcf 0.01em;
+       margin-left: -15px;        
     }
 
     .active {
@@ -65,26 +74,20 @@
         margin-top: -16px;         
         padding: 10px;
         width: 119%;
-        margin-left: -15px;
-        border-bottom: solid #cfcfcf 0.01em;
-        border-right: solid #cfcfcf 0.01em;
+        margin-left: -15px;        
     }
 
     .media1 {
         margin-top: -16px;         
         padding: 10px;
         width: 119%;
-        margin-left: -15px;
-        border-bottom: solid #cfcfcf 0.01em;
-        border-right: solid #cfcfcf 0.01em;
+        margin-left: -15px;        
     }
     .poll {
         margin-top: -16px;         
         padding: 10px;
         width: 119%;
-        margin-left: -15px;
-        border-bottom: solid #cfcfcf 0.01em;
-        border-right: solid #cfcfcf 0.01em;
+        margin-left: -15px;    
     }
 
     .fa-clone {
