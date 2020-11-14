@@ -22,6 +22,8 @@
     "@fortawesome/angular-fontawesome": "^0.6.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@kolkov/angular-editor": "^1.1.4",
+    "@syncfusion/ej2-angular-richtexteditor": "^18.3.48",
     "jquery": "^3.5.1",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.5.4",

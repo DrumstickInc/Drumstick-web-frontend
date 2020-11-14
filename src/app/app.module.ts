@@ -14,6 +14,10 @@ import { SinglecommunityComponent } from './singlecommunity/singlecommunity.comp
 import { NotificationsComponent } from './notifications/notifications.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SubmitComponent } from './submit/submit.component';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+import { FormsModule } from '@angular/forms';
+import { SubmitDirective } from './submit/submit.directive';
 
 @NgModule({
   declarations: [
@@ -27,13 +31,18 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SinglecommunityComponent,
     NotificationsComponent,
     ProjectsComponent,
+    SubmitComponent,
+    SubmitDirective,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularEditorModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

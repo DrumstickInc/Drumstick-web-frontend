@@ -130,7 +130,7 @@
 //Make post card
 .mp {
   height: 50px;
-  width: 60%;
+  width: 70%;
   background: #ffffff;  
 
     //User profile photo
@@ -144,29 +144,31 @@
     }
 
     // make post input field
-    input {
+    .text {
       display: inline-block;
-      margin-left: 10px;
-      border-top: none;
+      margin-left: 25px;
+      border-top: none;      
       border-left: none;
       border-right: none;
       border-bottom:solid #cfcfcf 0.05em;
       background: transparent;
+      width: 220px;
     }    
 
     //media icon
     .fa-photo-video {
       display: inline-block;        
       margin-top: 10px;
-      margin-left: 15px;
+      margin-left: 20px;
+      color: #615353;
     }
 
     // link url icon
     .fa-link {
       display: inline-block;        
       margin-top: 10px;
-      margin-left: 10px;
-      color: solid grey 0.05em;
+      margin-left: 15px;
+      color: #615353;
     }
     
 }
@@ -274,10 +276,10 @@
   
 }
 
-//treding section
+//trending section
 .trend {
   position: fixed;  
-  background: #e2e1e18f;;
+  background: #e2e1e18f;
   width: 22%;
   margin-top: 10px;
   border-radius: 5px;
