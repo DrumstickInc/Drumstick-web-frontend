@@ -9,11 +9,11 @@
                         <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
                         <img class="prof-icon" src="/assets/random10.jpg">   
                         <h5 class="side-user"> Username</h5>     
-                        <h6 class="sidenavs"><a routerLink="/">Home</a></h6>
-                        <p class="sidenavs-active"><a routerLink="/profile">Profile</a></p>
-                        <p class="sidenavs"><a routerLink="/communities">Communities</a></p>
-                        <p class="sidenavs"><a routerLink="/notifications">Notifications</a></p>
-                        <p class="sidenavs"><a routerLink="/projects">Projects</a></p>
+                        <h6 class="sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                        <p class="sidenavs-active"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
                     </div>
 
                     <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
@@ -140,27 +140,52 @@
         <div class="col-md-5">
             <h6 class="pp">projects<sup class="number">5</sup></h6>
             <h6 class="pp">posts<sup class="number">2</sup></h6>
+            <input class="form-control search" type="search" placeholder="search..">
             <hr style="margin-top: -4px; margin-left: -2px; width:90%;">     
             
             <!-- Grid area-->
             <div class="grid-container">
                 <div class="grid-item">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
                         <img class="card-img-top" src="/assets/project1.png" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Project 1</h5>
-                          <p class="card-text">Best project so far</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h6 class="card-title">Machine Learning Fairness</h6>
+                            <!--<p class="card-text description">An interactive story showing how biased data distorts a brand’s view of its customers – told by applying algorithms to portraits and interpreting them with AI-based illustration.</p>-->
+                            <!--https://www.thinkwithgoogle.com/feature/ml-fairness-for-marketers/#what-we-did-->
+                            <!--https://www.awwwards.com/sites/machine-learning-fairness#credits-->
+                            <hr>
+                            <p class="tech">technologies</p>
                         </div>
                     </div>
                 </div>
                 <div class="grid-item">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/project2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-title">Mammut-Local Adventure</h6>
+                            <!--<p class="card-text">The mountains have been waiting for us during the lockdown. With the Mammut Local Adventure Challenge, you get challenged to go out and explore your local outdoors.</p>-->
+                            <!--https://www.awwwards.com/sites/mammut-local-adventure-->
+                            <!--https://www.mammut.com/int/en/-->                       
+                            <hr>
+                            <p class="tech">technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
                         <img class="card-img-top" src="/assets/random4.jpg" alt="Card image cap">
                         <div class="card-body">
-                          <h5 class="card-title">Project 1</h5>
-                          <p class="card-text">Best project so far</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
+                          <h6 class="card-title">Project 1</h6>
+                          <p class="card-text">Best project so far</p>                          
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="card">
+                        <img class="card-img-top" src="/assets/random4.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h6 class="card-title">Project 1</h6>
+                          <p class="card-text">Best project so far</p>                          
                         </div>
                     </div>
                 </div>
