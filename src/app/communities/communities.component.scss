@@ -1,4 +1,13 @@
-/** side panel **/
+//Background
+.background {
+    background: #f0f0f08f;  
+    height: fit-content;
+    max-height: 93vh; 
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+// side panel 
 .sidepanel {    
     
     .fa-bars {
@@ -11,7 +20,7 @@
       text-shadow: 2px 2px 3px #ff634733;
     }
     .sidebar {
-      background: white;
+      background: linear-gradient(#ffffff,#ffffffe7,#ffffffd7,#ffffff9a), url("/assets/sidepanel-background.jpg");
       text-align: center;
       width: 0;    
       position: fixed;    
@@ -100,80 +109,116 @@
   }
 
   
-
-.communities {
-    margin:0 45px;
-    padding: 10px;
+// communities list
+.communities {    
+    background: #e2e1e18f;
+    height: fit-content;
+    width: 95%;
+    margin: 10px 20px;
+    border-radius: 5px;
 }
 
-.communities h4 {
-    color: #FD7F20;        
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.communities .unread h4 {
-    font-weight: bolder;   
-}
-
-.communities .list {
-    max-height: 75vh;
-    overflow-y: auto;
-    list-style: none;
-}
-
-.communities img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    display:  inline-block;
-}
-.communities .row {
-    width: 100%;
-}
-
-
-.communities p {
-    margin-left: 40px;
-    width: 550px;
-    white-space: nowrap;
-    overflow: hidden;
-    color: grey;
-    text-overflow: ellipsis;
-}
-
-.communities .unread p {
-    color: black;
-}
-
-.username {
-    color:#FD7F20;
-}
-
-.title {
-    font-weight: bold;
-}
-
-.time {
-    margin-left: 95%;
-    color:#FD7F20;
-}
-
+//communities list heading
 .heading {
-    color:#FD7F20;
-    font-weight: bolder;
-    margin-top: 30px;
-    margin-left: 20px;
+    padding: 20px;    
 }
 
+// communities number
 .superscript {
     color: white;
     padding: 2px 5px;
     background:#08DD80;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 12px;
     margin-left: 5px;    
 }
+// communities listing
+.list {    
+    max-height: 55vh;
+    overflow-y: auto;
+    list-style: none;    
+    margin-top: 0;
+    padding: 0 0 20px 0;
+}
+.li {
+    width: 100%;
+    margin-top: 0;    
+}
+
+.row {
+    width: 100%;                        
+}
+
+//communities icon
+.communities .comicon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display:  inline-block;
+}
+//community heading
+.communities h6 {
+    color: #FD7F20;
+    font-size: 17px;
+    margin: 3px 0 0 15px; 
+}
+//unread post heading
+.communities .unread h6 {
+    font-weight: bold;
+}
+
+//unread post text
+.communities .unread p {
+    color: black;
+}
+
+//post text
+.communities p {
+    margin: 1px 0 0 20px;
+    width: 275px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    color: grey;
+    text-overflow: ellipsis;
+}
+//post sender
+.username {
+    color:#FD7F20;
+}
+//post title
+.title {
+    font-weight: bold;
+}
+// time stamp
+.time {
+    margin: 1px 0 1px 95%;
+    font-size: 10px;
+    color:#FD7F20;
+}
+
+
+//communities guideines
+.guidelines {
+    background: #fffffff5;
+    height: fit-content;
+    width: 80%;
+    margin: 10px 20px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+
+    h6 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .guide {
+        color: gray;
+        font-size: 13px;
+        padding: 0;
+    }
+}
+
 
 
 .search {

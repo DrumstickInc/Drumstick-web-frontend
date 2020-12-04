@@ -8,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunitiesComponent implements OnInit {
 
+  openNav() {
+    document.getElementById("mySidepanel").style.width = "200px";
+  }
 
+  closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  
   constructor() { }
 
   ngOnInit(): void {
