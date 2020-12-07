@@ -18,6 +18,7 @@ export class CommunitiesComponent implements OnInit {
   
   constructor() { }
 
+  slide1Config = {"slidesToShow": 7, "slidesToScroll": 1, "autoplay":true, "autoplaySpeed":5550}; 
   ngOnInit(): void {
   }
 
