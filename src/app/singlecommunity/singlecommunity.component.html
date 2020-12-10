@@ -1,167 +1,383 @@
 <!--Navbar-->
 <app-navbar></app-navbar>
 
-<div class="container-fluid" style="background: #f0f0f08f; height:100%;">
-    <div class="container" style="background: white;">
-        <div class="row main">            
-            <div class="col-md-4">
-                <div class="sidebar">
-                    <div class="search-bar">
-                        <input type="text" placeholder="search drumstick">
+<div class="container-fluid background">
+    <div class="row">            
+        <div class="col">
+            <div class="row">
+                <div class="col sidepanel">                      
+                    <div id="mySidepanel" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
+                        <img class="prof-icon" src="/assets/random10.jpg">    
+                        <h5 class="side-user"> Username</h5>              
+                        <h6 class="sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                        <p class="sidenavs"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
+                        <p class="sidenavs-active"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
+                    </div>                     
+                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+        <div class="col-md-9" style="height: fit-content;">
+            <div class="row" style="margin-top: 21px;">
+                <div class="col">
+                    <div class="container communities">                    
+                        <h4 class="heading">Communities<sup class="superscript">2</sup></h4>
+                        <hr style="width: 108%; margin:-10px 0 0 -15px;">
+                        <ul class="container list">
+                            <!-- loop user communities-->
+                            <li><a href="/singlecommunity">
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row unread" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/angular kenya.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>Angular Kenya</h6>
+                                        <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
+                                        <span class="time">3mins</span>
+                                    </div>
+                                </div>                                                                                       
+                            </a></li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row unread" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random1.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>Devcom</h6>                                            
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">58mins</span>
+                                    </div>
+                                </div>                                                                                    
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random5.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>ColorfulWorld</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">2hrs</span>
+                                    </div>
+                                </div>                                                                                       
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random11.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>code lovers</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">6hrs</span>
+                                    </div>
+                                </div>                                                       
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random8.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>Timers</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">8hrs</span>
+                                    </div>
+                                </div>                                                       
+                            </li>
+                        
+                            <!-- End loop-->
+                        </ul>
+                
                     </div>
-                
-                    <br>
-                
-                    <div class="guidelines">
-                        <div class="header">
-                            <h5>Community guidelines</h5>
-                        </div>
-                    
-                        <p>
-                            <b>Be polite</b>, friendly, welcoming, and generally a nice person.
-                        </p>
-                        <hr>
-                        <p>
-                            <b>Be respectful and constructive</b> with your communication to fellow members.
-                        </p>
-                        <hr>
-                        <p>
-                            <b>Be collaborative.</b> We can learn a lot from each other.
-                        </p>
+
+                    <div class="container guidelines">
+                        <h6>Kindly remember</h6>
+                        <p class="guide">1. Show politeness and be friendly.</p>
+                        <p class="guide">2. Respect others.</p>
+                        <p class="guide">3. Share constructive post.</p>
+                        <p class="guide">4. Have fun and learn from others.</p>
+                        <p class="guide">5. Beware of community guidelines.</p>
                     </div>
-                
-                
-                    <br>
-                
-                    <div class="connect">
-                        <div class="header">
-                            <h5 style="text-align: center; color: black;">Connect with us</h5>
-                        </div>
-                    
-                        <div class="links">
-                            <a href="#"> <img src="/assets/twitter.png" alt="" width="45%"></a>
-                            <a href="#"> <img src="/assets/github.png" alt=""> </a>
-                        </div>
-                    </div>
-                
-                
-                    <br>
-                    <div class="similar">
-                        <div class="header">
-                            <h5>Similar communities</h5>
-                        </div>
-                    
-                        <div class="community">
-                            <img src="/assets/profile.jpg" alt="avatar">
-                            <p>Andela Kenya</p>
-                        </div>
-                        <div class="community">
-                            <img src="/assets/profile.jpg" alt="avatar">
-                            <p>GDG Nairobi</p>
-                        </div>
+                </div>                                
+                <div class="col-md-7">
+                    <div class="container-fluid com-cover">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img class="logo" src="/assets/angular kenya.jpg" alt="">
+                            </div>
+                            <div class="col">
+                                <h3 class="com-header">AngularKenya</h3>
+                                <p class="members">1.2K members</p>
+                                <span style="color: white"> | </span>
+                                <p class="posts">40 posts</p>
+                            </div>
+                        </div> 
+
+                        <!-- Make post card-->
+                        <div class="container C1 mp">
+                            <a href="/submit">
+                                <img src="/assets/random10.jpg">                        
+                                <input type="text" class="form-control text" placeholder="Post something...">
+                                <i class="fas fa-photo-video"></i>
+                                <i class="fas fa-link"></i>                        
+                            </a>
+                        </div>                                                                         
+
+                        <!-- Post card-->
+                        <div class="container C1 post">
+                            <!-- User info-->
+                            <div class="container user">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <a href="/profile"><img src="/assets/profile.jpg">
+                                        <p class="username">Pew Pew <span> &#8226; </span></p></a>
+                                        <a href="/singlecommunity"><p class="community"> MobileDev</p></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--post title-->
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h5 class="title">Project1.9-7.14</h5>
+                                </div>
+                                <div class="col">
+                                    <img class="github" src="/assets/github.png" alt='github'>
+                                    <img class="addon" src="/assets/open.png" alt="open source">
+                                    <img class="addon" src="/assets/money.png" alt="paid">
+                                </div>
+                            </div>                            
+                            <p class="text">Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular. In need of one angular dev.</p>
+                            <img class="image-post" src="/assets/screenshot.png" alt="screenshot">                                                
+                            <div class="container info">
+                                <p><span>300 </span>stars </p>
+                                <p><span class="bullet"> &#8226; </span><span>999+ </span>comments</p>
+                            </div>
+                            <hr style="margin-top: -10px;">
+                            <!---->
+                            <div class="row interact">
+                                <div class="col">
+                                    <i class="far fa-star"></i>
+                                    <h6>star </h6>                                
+                                </div>                            
+                                <div class="col">
+                                    <i class="far fa-comment"></i>
+                                    <h6>comment </h6>                                
+                                </div>
+                                <div class="col">
+                                    <i class="far fa-share-square"></i>
+                                    <h6>share </h6>
+                                </div>                        
+                            </div>
+                        </div>                        
+
+                        <!-- Post card-->
+                        <div class="container C1 post">
+                            <!-- User info-->
+                            <div class="container user">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <a href="/profile"><img src="/assets/profile.jpg">
+                                        <p class="username">Pew Pew <span> &#8226; </span></p></a>
+                                        <a href="/singlecommunity"><p class="community"> MobileDev</p></a>
+                                    </div>
+                                    <div class="col">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--post title-->
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <h5 class="title">Project1.9-7.14</h5>
+                                </div>
+                                <div class="col">
+                                    <img class="github" src="/assets/github.png" alt='github'>
+                                    <img class="addon" src="/assets/open.png" alt="open source">
+                                    <img class="addon" src="/assets/money.png" alt="paid">
+                                </div>
+                            </div>                            
+                            <p class="text">Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular. In need of one angular dev.</p>
+                            <img class="image-post" src="/assets/screenshot.png" alt="screenshot">                                                
+                            <div class="container info">
+                                <p><span>300 </span>stars </p>
+                                <p><span class="bullet"> &#8226; </span><span>999+ </span>comments</p>
+                            </div>
+                            <hr style="margin-top: -10px;">
+                            <!---->
+                            <div class="row interact">
+                                <div class="col">
+                                    <i class="far fa-star"></i>
+                                    <h6>star </h6>                                
+                                </div>                            
+                                <div class="col">
+                                    <i class="far fa-comment"></i>
+                                    <h6>comment </h6>                                
+                                </div>
+                                <div class="col">
+                                    <i class="far fa-share-square"></i>
+                                    <h6>share </h6>
+                                </div>                        
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
-        
-        
-            <div class="col">
-                <div class="container-fluid community-section">                           
-                    <div class="images">
-                        <img class="background" src="/assets/alc.jpeg" alt="">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="logo">
-                                    <img src="/assets/angular kenya.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="group-details">
-                                    <div class="about">
-                                        <div class="textarea">
-                                            <h4>Angular Kenya</h4>
-                                            <p>We 'ng serve' the Kenyan tech community to become proficient Angular developers</p>
-                                        </div>
-                                        <div class="button">
-                                            <button><a href="#"> JOIN </a></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>                                
+            <!--
+                <div class="guidelines">
+                    <div class="header">
+                        <h5>Community guidelines</h5>
+                    </div>
+                
+                    <p>
+                        <b>Be polite</b>, friendly, welcoming, and generally a nice person.
+                    </p>
                     <hr>
-                    <div class="community-posts">
-                        <div class="post">
-                            <div class="header">
-                                <img src="/assets/profile.jpg" alt="avatar">
-                                <p>Pew Pew</p>
+                    <p>
+                        <b>Be respectful and constructive</b> with your communication to fellow members.
+                    </p>
+                    <hr>
+                    <p>
+                        <b>Be collaborative.</b> We can learn a lot from each other.
+                    </p>
+                </div>
+                <div class="connect">
+                    <div class="header">
+                        <h5 style="text-align: center; color: black;">Connect with us</h5>
+                    </div>
+                
+                    <div class="links">
+                        <a href="#"> <img src="/assets/twitter.png" alt="" width="45%"></a>
+                        <a href="#"> <img src="/assets/github.png" alt=""> </a>
+                    </div>
+                </div>
+            
+            
+                <br>
+                <div class="similar">
+                    <div class="header">
+                        <h5>Similar communities</h5>
+                    </div>
+                
+                    <div class="community">
+                        <img src="/assets/profile.jpg" alt="avatar">
+                        <p>Andela Kenya</p>
+                    </div>
+                    <div class="community">
+                        <img src="/assets/profile.jpg" alt="avatar">
+                        <p>GDG Nairobi</p>
+                    </div>
+                </div>
+            
+            <div class="container-fluid community-section">                           
+                <div class="images">
+                    <img class="background" src="/assets/alc.jpeg" alt="">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="logo">
+                                <img src="/assets/angular kenya.jpg" alt="">
                             </div>
-                            <div class="info">
-                                <div class="title-section">
-                                    <div class="details">
-                                        <h5>Project1.9-7.14</h5>
-                                        <div>
-                                            <img src="/assets/github.png" alt='github'>
-                                        </div>
+                        </div>
+                        <div class="col">
+                            <div class="group-details">
+                                <div class="about">
+                                    <div class="textarea">
+                                        <h4>Angular Kenya</h4>
+                                        <p>We 'ng serve' the Kenyan tech community to become proficient Angular developers</p>
                                     </div>
-                                    <div class="images">
-                                        <img src="/assets/open.png" alt="open source">
-                                        <img src="/assets/money.png" alt="paid">
+                                    <div class="button">
+                                        <button><a href="#"> JOIN </a></button>
                                     </div>
-                                    <!-- <button>Interested</button> -->
-                                </div>
-                                <p>Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular. In need of one angular dev.</p>
-                            </div>
-                            <div class="img">
-                                <img src="/assets/screenshot.png" alt="screenshot">
-                            </div>
-                            <hr>
-                            <div class="footer">
-                                <div class="comments">
-                                    <img src="/assets/comment.png" alt="">
-                                    <a href="#">comments</a>
-                                </div>
-                                <div class="share">
-                                    <img src="/assets/share.png" alt="">
-                                    <a href="#">share</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <br>
-                
-                    <div class="community-posts">
-                        <div class="post">
-                            <div class="header">
-                                <img src="/assets/profile.jpg" alt="avatar">
-                                <p>John Skeet</p>
-                            </div>
-                            <div class="info">
-                                <div class="title-section">
-                                    <div class="details">
-                                        <h5>Stack overflow</h5>
-                                        <div>
-                                            <img src="/assets/github.png" alt='github'>
-                                        </div>
+                    </div>                        
+                </div>                                
+                <hr>
+                <div class="community-posts">
+                    <div class="post">
+                        <div class="header">
+                            <img src="/assets/profile.jpg" alt="avatar">
+                            <p>Pew Pew</p>
+                        </div>
+                        <div class="info">
+                            <div class="title-section">
+                                <div class="details">
+                                    <h5>Project1.9-7.14</h5>
+                                    <div>
+                                        <img src="/assets/github.png" alt='github'>
                                     </div>
                                 </div>
-                                <p>Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                <div class="images">
+                                    <img src="/assets/open.png" alt="open source">
+                                    <img src="/assets/money.png" alt="paid">
+                                </div>
+                                -- <button>Interested</button> --
                             </div>
-                            <hr>
-                            <div class="footer">
-                                <div class="comments">
-                                    <img src="/assets/comment.png" alt="">
-                                    <a href="#">comments</a>
-                                </div>
-                                <div class="share">
-                                    <img src="/assets/share.png" alt="">
-                                    <a href="#">share</a>
-                                </div>
+                            <p>Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular. In need of one angular dev.</p>
+                        </div>
+                        <div class="img">
+                            <img src="/assets/screenshot.png" alt="screenshot">
+                        </div>
+                        <hr>
+                        <div class="footer">
+                            <div class="comments">
+                                <img src="/assets/comment.png" alt="">
+                                <a href="#">comments</a>
+                            </div>
+                            <div class="share">
+                                <img src="/assets/share.png" alt="">
+                                <a href="#">share</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>    
-        </div>
-    </div>
+                <br>
+            
+                <div class="community-posts">
+                    <div class="post">
+                        <div class="header">
+                            <img src="/assets/profile.jpg" alt="avatar">
+                            <p>John Skeet</p>
+                        </div>
+                        <div class="info">
+                            <div class="title-section">
+                                <div class="details">
+                                    <h5>Stack overflow</h5>
+                                    <div>
+                                        <img src="/assets/github.png" alt='github'>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                        </div>
+                        <hr>
+                        <div class="footer">
+                            <div class="comments">
+                                <img src="/assets/comment.png" alt="">
+                                <a href="#">comments</a>
+                            </div>
+                            <div class="share">
+                                <img src="/assets/share.png" alt="">
+                                <a href="#">share</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>  
+        <div class="col-md-1"></div>  
+    </div>    
 </div>

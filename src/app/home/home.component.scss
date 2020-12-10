@@ -11,7 +11,7 @@
 .sidepanel {    
   
   .fa-bars {
-    position: relative;
+    position: fixed;
     margin: 10px;
     padding: 10px;
     font-size: 25px;
@@ -20,7 +20,8 @@
     text-shadow: 2px 2px 3px #ff634733;
   }
   .sidebar {
-    background: white;
+    background: linear-gradient(#ffffff,#ffffffe7,#ffffffd7,#ffffff9a), url("/assets/sidepanel-background.jpg");
+    background-size: cover;
     text-align: center;
     width: 0;    
     position: fixed;    
@@ -29,6 +30,7 @@
     top: 7vh;
     left: 0;
     transition: 0.5s;
+    height: 93vh;
   }
   
   .closebtn {
@@ -40,13 +42,30 @@
     color: grey;
   }
 
+  .prof-icon {
+    height: 150px;
+    width: 150px;
+    margin-top: 50px;    
+    padding: 10px;
+    border-radius: 50%;    
+  }
+
+  .side-user {
+    color: #FD7F20;    
+  }
+  
   .sidenavs {
-      padding:20px 0;   
+      padding:10px 0;   
       margin-left: -15px; 
       margin-right: -15px;     
       margin-top: -5px;
       display: block;
       transition: 0.3s;
+  }
+
+  .addon {
+    color: #ff634733;     
+    font-size: 18px;      
   }
   
   .sidenavs-active {
@@ -60,6 +79,11 @@
   .sidenavs-active a {
       color: white;
       font-weight: bold;
+      
+      .addon {
+        color: #bebebe; 
+        font-weight: bold;                  
+      }
   }
   
   .sidenavs:hover,.sidenavs:active,.sidenavs:focus {
@@ -68,18 +92,22 @@
       a {
           color: tomato;
       }
+
+      .addon {
+        color: white;           
+      }
   }
   
   .sidenavs a {
       color: black;
+      font-weight: normal;
   }
   
-  .sidebar h5 {
-      margin-top: 65%;
+  .sidebar h6 {
+      margin-top: 20%;
   }
 
 }
-  
 
 //Base container
 .C1 {
@@ -279,7 +307,7 @@
 //treding section
 .trend {
   position: fixed;  
-  background: #e2e1e18f;;
+  background: #e2e1e18f;
   width: 22%;
   margin-top: 10px;
   border-radius: 5px;
