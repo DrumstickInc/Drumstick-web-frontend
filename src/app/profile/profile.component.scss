@@ -1,127 +1,176 @@
+//Background
+.background {
+    background: #f0f0f08f;  
+    height: fit-content;
+    max-height: 93vh;     
+    width: 100%;
+}
+  
+//////// Sidepanel ////////
+//Sidepanel
+.sidepanel {    
+    
+    .fa-bars {
+      position: relative;
+      margin: 10px;
+      padding: 10px;
+      font-size: 25px;
+      background: white; 
+      border-radius: 30%;
+      text-shadow: 2px 2px 3px #ff634733;
+    }
+    .sidebar {
+      background: linear-gradient(#ffffff,#ffffffe7,#ffffffd7,#ffffff9a), url("/assets/sidepanel-background.jpg");
+      background-size: cover;
+      text-align: center;
+      width: 0;    
+      position: fixed;    
+      overflow-x: hidden;
+      z-index: 1;
+      top: 7vh;
+      left: 0;
+      transition: 0.5s;
+      height: 93vh;
+    }
+    
+    .closebtn {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: grey;
+    }
+
+    .prof-icon {
+      height: 150px;
+      width: 150px;
+      margin-top: 50px;    
+      padding: 10px;
+      border-radius: 50%;    
+    }
+
+    .side-user {
+      color: #FD7F20;    
+    }
+    
+    .sidenavs {
+        padding:10px 0;   
+        margin-left: -15px; 
+        margin-right: -15px;     
+        margin-top: -5px;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .addon {
+      color: #ff634733;     
+      font-size: 18px;      
+    }
+    
+    .sidenavs-active {
+        padding:20px 0;  
+        margin-top: -5px; 
+        margin-left: -15px; 
+        margin-right: -15px; 
+        background-color: tomato;    
+    }
+    
+    .sidenavs-active a {
+        color: white;
+        font-weight: bold;
+        
+        .addon {
+          color: #bebebe; 
+          font-weight: bold;                  
+        }
+    }
+    
+    .sidenavs:hover,.sidenavs:active,.sidenavs:focus {
+        background: #ff634733;    
+    
+        a {
+            color: tomato;
+        }
+
+        .addon {
+          color: white;           
+        }
+    }
+    
+    .sidenavs a {
+        color: black;
+        font-weight: normal;
+    }
+    
+    .sidebar h6 {
+        margin-top: 20%;
+    }
+  
+  }
+
+
+//////// profile column ////////
+
+// cover image 
+.coverimg {
+    margin-left:-15px;    
+    width: 100%;
+    height: 90px;
+    object-fit: cover;   
+}
+
+// user details
+
+.details {
+    background: white;
+    border:solid #cfcfcf 0.05em;
+    width: 100%;    
+}
 .prof-pic {
-    height: 250px;
-    width: 250px;
-    margin-top: 20%;    
-    padding: 10px;
+    height: 150px;
+    width: 150px;           
+    margin-top: -85px;        
     border-radius: 50%;    
+    border: solid white .3em;       
 }
 
 .user {
-    font-weight: bold;
+    font-weight: 500px;        
+    margin-top: -20px;     
     color:#FD7F20;
-    padding-top: 15px;
+    padding-top: 30px;
+    font-size: 23px;
 }
 
-.profession {
-    padding-top: 5px;    
+.profession {        
+    color: #08DD80;           
+    font-weight: 150px;
+    font-size: 14px;
+}
+
+.bio {
+    color: #aca9a9;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 .email {
-    padding-top: 5px;
-}
-
-.sidebar {
-    background: white;
-    text-align: center;
-    width: 400px;    
-}
-
-.sidenavs {
-    padding:20px 0;   
-    margin-left: -15px; 
-    margin-right: -15px;     
-    margin-top: -5px;
-}
-
-.sidenavs-active {
-    padding:20px 0;  
-    margin-top: -5px; 
-    margin-left: -15px; 
-    margin-right: -15px; 
-    background-color: tomato;    
-}
-
-.sidenavs-active a {
-    color: white;
-    font-weight: bold;
-}
-
-.sidenavs:hover,.sidenavs:active,.sidenavs:focus {
-    background: #ff634733;    
-
-    a {
-        color: tomato;
-    }
-}
-
-.sidenavs a {
-    color: black;
-}
-
-.sidebar h5 {
-    margin-top: 65%;
-}
-
-.mowiki {
-    text-align: center;
-    padding: 20px;
-    margin-top: 10px;
-}
-
-.mowiki-icon {
-    border-radius: 50%;
-    margin-top: 70px;  
-}
-
-.keyword {
-    color: #FD7F20;
-}
-
-.review {
-    border: solid grey 0.01em;
-    background: white;
-    width: 400px; 
-    height: fit-content;   
-    padding: 10px;
-}
-
-.review-slot {
-    margin: 0 10px;
-}
-
-.review-heading {
-    margin-top: 5px; 
-    margin-left: 80px; 
-    padding: 20px; 
-    display: inline-block; 
-    color: #08DD80;
-}
-.review img {
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;    
-}
-.review h6 {
-    margin-left: 10px;
-    margin-top: 11px;
-    color: #08DD80;
-    font-weight: bold;
-}
-
-.review p {
+    position: absolute;
     color: gray;
-    margin-top: 10px;
     text-align: center;
+    bottom: -12px;
+    left: 15%;
+    font-size: 14px;
 }
 
 .socials {
-    list-style: none;
-    margin-left: -50px;
+    list-style: none;    
     margin-top: 20px;
 }
 
-.socials li {
-    display: inline-block;
+.socials li {    
     margin: 0 10px;
 }
 
@@ -132,4 +181,187 @@
 
 .github {
     width: 30px;
+    margin-top: 10px;
+}
+
+.linkedin {
+    width: 25px;
+    margin-top: 10px;
+}
+
+//////// mowiki section ////////
+.mowiki {
+    background: white;
+    border:solid #cfcfcf 0.05em;
+    text-align: center;    
+    margin-top: 45px;
+    padding: 15px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+
+
+.mowiki-icon {
+    margin-left: 3%;
+    border-radius: 50%;
+    margin-top: -40px;
+    height: 65px; 
+    width: 65px;   
+    display: inline-block;
+}  
+
+.mowiki-header {
+    display: inline-block;
+}
+
+
+
+.mowiki-menu {    
+    position: absolute;
+    background: #E8E8E8;   
+    margin-left: -10px;
+    margin-top: -19px;
+    height: 33px;
+    padding: 5px;
+    display: none;    
+    border-radius: 20px 5px;
+}
+
+.mo-item {    
+    display: inline-block;
+}
+
+.fa-edit {
+    margin-left: 15px;
+    padding: 0 10px;
+    color:#FD7F20;
+    font-size: 20px;    
+}
+
+.fa-times {
+    padding:0 10px;    
+    font-size: 15px;   
+    color: gray;
+}
+
+.mowiki-text {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.keyword {
+    color: #FD7F20;
+}
+
+
+
+//////// Review section ///////
+
+.review-heading {
+    margin-top: 5px; 
+    margin-left: 10px; 
+    padding: 20px; 
+    display: inline-block; 
+    color: #08DD80;
+}
+
+.review {
+    border: solid grey 0.01em;
+    background: white;
+    width: 400px; 
+    height: fit-content;   
+    padding: 5px;
+}
+
+.review-slot {
+    margin: 0 10px;
+}
+
+
+.review img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;    
+}
+.review h6 {
+    margin-left: 5px;
+    margin-top: 4px;
+    color: #08DD80;
+    font-weight: bold;
+}
+
+.review p {
+    color: gray;
+    margin-top: 10px;
+    text-align: center;
+}
+
+//////// Posts and projects ///////
+
+.pp {
+    display: inline-block;
+    font-weight: 150;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+.search {
+    display: inline-block;
+    width: 250px;
+    font-size: 15px;    
+    height: 26px;    
+    margin-left: 27%;
+    background: transparent;
+    border: none;
+    border-bottom: solid #a5a3a3 0.01em;    
+    border-radius: 0;
+}
+
+.number {
+    color: white;
+    background: #FD7F20;
+    padding: 1px 2px;
+    border-radius: 3px;
+    margin-left: 2px;
+}
+
+// Grid section
+.grid-container {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: auto auto;        
+    width: 90%;
+}
+
+.grid-item {    
+
+    .card {
+        width: 18rem; 
+        height: fit-content;    
+        margin-top: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 180px;
+    }
+
+    h6 {
+        color:#FD7F20;
+        margin-top: -12px;
+        margin-left: -8px;
+    }
+    
+    .description {
+        margin: -10px 0;
+        font-size: 12px;
+    }
+
+    .tech {
+        font-size: 12px;
+        margin: -10px 0;
+    }
 }

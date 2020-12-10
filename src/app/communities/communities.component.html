@@ -1,258 +1,345 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" style="background: #f0f0f08f; height:100%;">
+
+<div class="container-fluid background">
     <div class="row">
-        <div class="col-md sidebar">            
-            <h5 class="sidenavs"><a routerLink="/">Home</a></h5>
-            <h6 class="sidenavs"><a href="/profile">Profile</a></h6>
-            <h6 class="sidenavs-active"><a routerLink="/communities">Communities</a></h6>
-            <h6 class="sidenavs"><a routerLink="/notifications">Notifications</a></h6>
-            <h6 class="sidenavs"><a routerLink="/projects">Projects</a></h6>
-        </div>
-        <div class="col-md-9">
-            <div class="row" style="margin-top: 21px;">
-                <div class="col-md-7 communities">
-                    <h4 class="heading">Communities<sup class="superscript">2</sup></h4>
-                    <hr>
-                    <ul class="container list">
-                        <!-- loop user communities-->
-
-                        <li><a href="/singlecommunity">
-                            <div class="row unread" >
-                                <div class="col-sm-1">
-                                    <img src="/assets/angular kenya.jpg">
-                                </div>
-                                <div class="col">
-                                    <h4>Angular Kenya</h4>
-                                    <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
-                                    <span class="time">3mins</span>
-                                </div>
-                            </div>                                                       
-                            <hr>
-                        </a></li>
-                        <li>
-                            <div class="row unread" >
-                                <div class="col-sm-1">
-                                    <img src="/assets/random1.jpg">
-                                </div>
-                                <div class="col">
-                                    <h4>Devcom</h4>
-                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
-                                    <span class="time">58mins</span>
-                                </div>
-                            </div>                                                       
-                            <hr>
-                        </li>
-                        <li>
-                            <div class="row" >
-                                <div class="col-sm-1">
-                                    <img src="/assets/random5.jpg">
-                                </div>
-                                <div class="col">
-                                    <h4>ColorfulWorld</h4>
-                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
-                                    <span class="time">2hrs</span>
-                                </div>
-                            </div>                                                       
-                            <hr>
-                        </li>
-                        <li>
-                            <div class="row" >
-                                <div class="col-sm-1">
-                                    <img src="/assets/random11.jpg">
-                                </div>
-                                <div class="col">
-                                    <h4>code lovers</h4>
-                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
-                                    <span class="time">6hrs</span>
-                                </div>
-                            </div>                                                       
-                            <hr>
-                        </li>
-                        <li>
-                            <div class="row" >
-                                <div class="col-sm-1">
-                                    <img src="/assets/random8.jpg">
-                                </div>
-                                <div class="col">
-                                    <h4>Timers</h4>
-                                    <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
-                                    <span class="time">8hrs</span>
-                                </div>
-                            </div>                                                       
-                            <hr>
-                        </li>
-                        
-                        <!--- End loop-->
-                    </ul>
-                </div>                
-                <div class="col-md" style="text-align: center;">
-                    <div class="container-fluid" style="background: white;width: 120%; border: #d8d8d8 0.01em solid; padding: 10px;">                        
-                        <div class="row">
-                            <div class="col-md-5">
-                                <form id="app-cover">
-                                    <div id="select-box">
-                                        <input type="checkbox" id="options-view-button">
-                                        <div id="select-button" class="brd">
-                                            <div id="selected-value">
-                                                <span>Filter</span>
-                                            </div>
-                                            <div id="chevrons">
-                                                    <i class="fas fa-chevron-up"></i>
-                                                    <i class="fas fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        <div id="options">
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="angular">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="angular">
-                                                    <i class="fab fa-python"></i>
-                                                    <span class="label">Python</span>
-                                                    <span class="opt-val">Python</span>
-                                            </div>
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="dribbble">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="dribbble">
-                                                    <i class="fab fa-java"></i>
-                                                    <span class="label">Java</span>
-                                                    <span class="opt-val">Java</span>
-                                            </div>
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="behance">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="behance">
-                                                    <i class="fas fa-gem"></i>
-                                                    <span class="label">Ruby</span>
-                                                    <span class="opt-val">Ruby</span>
-                                            </div>
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="hackerrank">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
-                                                    <i class="fab fa-html5"></i>
-                                                    <span class="label">HTML</span>
-                                                    <span class="opt-val">HTML</span>
-                                            </div>
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="stackoverflow">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
-                                                    <i class="fab fa-js"></i>
-                                                    <span class="label">JavaScript</span>
-                                                    <span class="opt-val">JavaScript</span>
-                                            </div>
-                                            <div class="option">
-                                                    <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                    <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                    <i class="fab fa-cuttlefish c"></i>
-                                                    <span class="label">C -Language</span>
-                                                    <span class="opt-val">C -Language</span>
-                                            </div>
-                                            <div class="option">
-                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                <i class="fab fa-cuttlefish cplusplus">++</i>
-                                                <span class="label">C++ -Language</span>
-                                                <span class="opt-val">C++ -Language</span>
-                                            </div>
-                                            <div class="option">
-                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                <i class="fab fa-cuttlefish csharp">#</i>
-                                                <span class="label">C# -Language</span>
-                                                <span class="opt-val">C# -Language</span>
-                                            </div>                                                                                        
-                                            <div class="option">
-                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                <i class="fab fa-php"></i>
-                                                <span class="label">php</span>
-                                                <span class="opt-val">php</span>
-                                            </div>
-                                            <div class="option">
-                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                <i class="fas fa-database"></i>
-                                                <span class="label">SQL</span>
-                                                <span class="opt-val">SQL</span>
-                                            </div>
-                                            <div class="option">
-                                                <input class="s-c top" type="radio" name="platform" value="freecodecamp">
-                                                <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                <i class="fab fa-swift"></i>
-                                                <span class="label">Swift</span>
-                                                <span class="opt-val">Swift</span>
-                                            </div>
-                                            <div id="option-bg"></div>
-                                        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col sidepanel">                      
+                    <div id="mySidepanel" class="sidebar">
+                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
+                        <img class="prof-icon" src="/assets/random10.jpg">    
+                        <h5 class="side-user"> Username</h5>              
+                        <h6 class="sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                        <p class="sidenavs"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
+                        <p class="sidenavs-active"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
+                        <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
+                    </div>                     
+                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>               
+        <div class="col-md-9" style="height: fit-content;">
+            <div class="row" style="margin-top: 21px;">                  
+                <div class="col">
+                    <div class="container communities">                    
+                        <h4 class="heading">Communities<sup class="superscript">2</sup></h4>
+                        <hr style="width: 108%; margin:-10px 0 0 -15px;">
+                        <ul class="container list">
+                            <!-- loop user communities-->
+                            <li><a href="/singlecommunity">
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row unread" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/angular kenya.jpg">
                                     </div>
-                                </form>
-                            </div>
-                            <div class="col">
-                                <span style="display: inline-block; font-size: 20px;">| </span> 
-                                <input class="search" type="input" placeholder="search" style="width: 90%;display: inline-block; margin-left: 10px;">
-                                <i class="fas fa-search"></i>                                                                
-                            </div>
-                        </div>                                                
-                    </div>                             
-                    <ul class="com-list">
-                        <li data-toggle="modal" data-target="#com-modal">
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                            
-                        </li>
-                        <li class="noma">
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                            <span class="tooltip">
-                                tooltip in
-                            </span>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>
-                        <li>
-                            <img src="/assets/random8.jpg"> 
-                            <p>Timer</p>
-                        </li>                        
-                    </ul>
+                                    <div class="col">
+                                        <h6>Angular Kenya</h6>
+                                        <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
+                                        <span class="time">3mins</span>
+                                    </div>
+                                </div>                                                                                       
+                            </a></li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row unread" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random1.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>Devcom</h6>                                            
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">58mins</span>
+                                    </div>
+                                </div>                                                                                    
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random5.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>ColorfulWorld</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">2hrs</span>
+                                    </div>
+                                </div>                                                                                       
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random11.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>code lovers</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">6hrs</span>
+                                    </div>
+                                </div>                                                       
+                            </li>
+                            <li>
+                                <hr style="margin: 0 0 5px 0;">
+                                <div class="row" >
+                                    <div class="col-sm-1">
+                                        <img class="comicon" src="/assets/random8.jpg">
+                                    </div>
+                                    <div class="col">
+                                        <h6>Timers</h6>
+                                        <p><span class="username">JonSkeet: </span><span class="title">Stack Overflow</span> Made a web application to help developers share their blockers, and fellow developers are able to assist with the blocker in real time.</p>
+                                        <span class="time">8hrs</span>
+                                    </div>
+                                </div>                                                       
+                            </li>
+                        
+                            <!-- End loop-->
+                        </ul>                
+                    </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="com-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">&times;</span>
-                                    </button>
+                    <div class="container guidelines">
+                        <h6>Kindly remember</h6>
+                        <p class="guide">1. Show politeness and be friendly.</p>
+                        <p class="guide">2. Respect others.</p>
+                        <p class="guide">3. Share constructive post.</p>
+                        <p class="guide">4. Have fun and learn from others.</p>
+                        <p class="guide">5. Beware of community guidelines.</p>
+                    </div>
+                </div>                
+                <div class="col-md-7">
+                    <!-- foreground-->
+                    <div class="container foreground">
+                        <h4 class="heading">Explore communities</h4>
+                        <div class="slider-area">
+                            <ngx-slick-carousel class="carousel top_slider" 
+                                #slickModal="slick-carousel" 
+                                [config]="slide1Config">
+                            <a ngxSlickItem class="slide items" href="/communities">                                
+                                    <img src="/assets/angular kenya.jpg"> 
+                                    <p>AngularKenya</p>                                                                                                                  
+                            </a>
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                         
+                                <img src="/assets/random2.jpg"> 
+                                <p>UbuntuLovers</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                         
+                                    <img src="/assets/random3.jpg"> 
+                                    <p>PythonCrave</p>                           
+                            </a>                                                   
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                      
+                                <img src="/assets/random4.jpg"> 
+                                <p>Devhub</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                               
+                                <img src="/assets/random5.jpg"> 
+                                <p>ColorfulWorld</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                       
+                                <img src="/assets/random6.jpg"> 
+                                <p>MobileDev</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                        
+                                <img src="/assets/random7.jpg"> 
+                                <p>Lights</p>                          
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities"> 
+                                <img src="/assets/random8.jpg"> 
+                                <p>Lights</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">                                                        
+                                <img src="/assets/random9.jpg"> 
+                                <p>Lights</p>                           
+                            </a>                                                    
+                            <a ngxSlickItem  class="slide items" routerLink="/communities">  
+                                <img src="/assets/random10.jpg"> 
+                                <p>Lights</p>                          
+                            </a>                                                    
+                            </ngx-slick-carousel>
+                        </div>
+                        <div class="search-bar container">                                                        
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <form id="app-cover">
+                                            <div id="select-box">
+                                                <input type="checkbox" id="options-view-button">
+                                                <div id="select-button" class="brd">
+                                                    <div id="selected-value">
+                                                        <span>Filter</span>
+                                                    </div>
+                                                    <div id="chevrons">
+                                                            <i class="fas fa-chevron-up"></i>
+                                                            <i class="fas fa-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div id="options">
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="angular">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="angular">
+                                                            <i class="fab fa-python"></i>
+                                                            <span class="label">Python</span>
+                                                            <span class="opt-val">Python</span>
+                                                    </div>
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="dribbble">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="dribbble">
+                                                            <i class="fab fa-java"></i>
+                                                            <span class="label">Java</span>
+                                                            <span class="opt-val">Java</span>
+                                                    </div>
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="behance">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="behance">
+                                                            <i class="fas fa-gem"></i>
+                                                            <span class="label">Ruby</span>
+                                                            <span class="opt-val">Ruby</span>
+                                                    </div>
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="hackerrank">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+                                                            <i class="fab fa-html5"></i>
+                                                            <span class="label">HTML</span>
+                                                            <span class="opt-val">HTML</span>
+                                                    </div>
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="stackoverflow">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
+                                                            <i class="fab fa-js"></i>
+                                                            <span class="label">JavaScript</span>
+                                                            <span class="opt-val">JavaScript</span>
+                                                    </div>
+                                                    <div class="option">
+                                                            <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                            <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                            <i class="fab fa-cuttlefish c"></i>
+                                                            <span class="label">C -Language</span>
+                                                            <span class="opt-val">C -Language</span>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                        <i class="fab fa-cuttlefish cplusplus">++</i>
+                                                        <span class="label">C++ -Language</span>
+                                                        <span class="opt-val">C++ -Language</span>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                        <i class="fab fa-cuttlefish csharp">#</i>
+                                                        <span class="label">C# -Language</span>
+                                                        <span class="opt-val">C# -Language</span>
+                                                    </div>                                                                                        
+                                                    <div class="option">
+                                                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                        <i class="fab fa-php"></i>
+                                                        <span class="label">php</span>
+                                                        <span class="opt-val">php</span>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                        <i class="fas fa-database"></i>
+                                                        <span class="label">SQL</span>
+                                                        <span class="opt-val">SQL</span>
+                                                    </div>
+                                                    <div class="option">
+                                                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                                                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                                                        <i class="fab fa-swift"></i>
+                                                        <span class="label">Swift</span>
+                                                        <span class="opt-val">Swift</span>
+                                                    </div>
+                                                    <div id="option-bg"></div>
+                                                </div>
+                                            </div>
+                                    </form>
                                 </div>
-                                <div class="modal-body">
-                                  ...
+                                <div class="col">
+                                    <span style="display: inline-block; font-size: 20px;">| </span> 
+                                    <input class="search" type="input" placeholder="search" style="width: 90%;display: inline-block; margin-left: 10px;">
+                                    <i class="fas fa-search"></i>                                                                
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>                                                                            
+                        </div>
+                    </div>
+
+                    <!-- background-->
+                    <div class="contaner mock-background">
+                        <!-- Make post card-->
+                        <div class="container C1 mp">                            
+                            <div class="mock-icon"></div>
+                            <div class="text"></div>
+                            <div class="fas"></div>
+                            <div class="fas"></div>                        
+                        </div>
+                                
+                        <!-- Post card1-->
+                        <div class="container C1 post">
+                        <!-- User info-->
+                        <div class="container user">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="mock-icon"></div>
+                                    <div class="mock-username"></div>
+                                    <div class="mock-community"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="fas"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>                
+                        <!--post title-->
+                        <div class="mock-title"></div>
+                        <div class="mock-text1 container"></div>
+                        <div class="mock-text2 container"></div>
+                        <div class="mock-image-post"></div>                                                
+                        <div class="container info">
+                            <div class="mock-stars"></div>
+                            <div class="mock-stars"></div>
+                        </div>
+                        <hr style="margin-top: -10px;">
+                        <!---->
+                        <div class="row interact">
+                            <div class="col">
+                                <div class="far"></div>
+                                <div class="h6"></div>                                
+                            </div>                            
+                            <div class="col">
+                                <div class="far "></div>
+                                <div class="h6"></div>
+                            </div>
+                            <div class="col">
+                                <div class="far"></div>
+                                <div class="h6"></div>
+                            </div>                        
+                        </div>
+                        </div>
+
+                        <!-- Post card2-->
+                        <div class="container C1 post">
+                        <!-- User info-->
+                        <div class="container user">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="mock-icon"></div>
+                                    <div class="mock-username"></div>
+                                    <div class="mock-community"></div>
+                                </div>
+                                <div class="col">
+                                    <div class="fas"></div>
+                                </div>
+                            </div>                            
+                        </div>
+                        <!--post title-->
+                        <div class="mock-title"></div>
+                        <div class="mock-text1 container"></div>
+                        <div class="mock-text2 container"></div>                    
+                        </div>  
+                    </div>                                                                 
+                </div>                  
             </div>             
-        </div>        
-        <div class="col"></div>
+        </div>         
+        <div class="col-md-1"></div>   
     </div>        
 </div>
