@@ -1,35 +1,43 @@
-
-<!--Navbar-->
-<app-navbar></app-navbar>
-
 <div class="container-fluid background">            
     <div class="row">
         <div class="col">
             <div class="row">
                 <!-- sidepanel-->
                 <div class="col sidepanel">
+                    <div id="mySidepanel" class="sidebar"> 
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="print"></div>
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                            </div>
+                            <div class="col">
+                                <a class="navbar-brand brand" routerLink="">Drumstick.</a>            
+                            </div>
+                        </div> 
+                        <div class="btn btn-light dropdown-toggle drop1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </div>  
+                        <div class="dropdown-menu dropm" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item"  href="/login">Login</a>
+                            <a class="dropdown-item"  href="/signup">Sign up</a>
+                        </div>
 
-                    <div id="mySidepanel" class="sidebar">  
-                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
                         <img class="prof-icon" src="/assets/random10.jpg">   
                         <h5 class="side-user"> Username</h5>     
-                        <h6 class="sidenavs-active"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                        <p class="home sidenavs-active"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></p>
                         <p class="sidenavs"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
                         <p class="sidenavs"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
                         <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
                         <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
-                    </div>
-
-                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
-                </div>
-                <div class="col"></div>
+                    </div>                   
+                </div>                
             </div>
         </div>
         <div class="col-md-8" style="height: fit-content;">
             <div class="row">
-
                 <!--Left side-->
-                <div class="col">
+                <div class="col-md-5">
                     <div class="container trend">
 
                         <h4 class="heading"><span class="tag">#</span>  Trends</h4>
@@ -90,7 +98,7 @@
                 </div>
 
                 <!--Right side-->
-                <div class="col-md-7" style="height: fit-content;">
+                <div class="col-md-7" style="overflow-y: hidden;">
                     
                     <!-- Communites slider-->
                     <div class="container-fluid C1 com">
@@ -175,7 +183,7 @@
                         <!-- User info-->
                         <div class="container user">
                             <div class="row">
-                                <div class="col-11">
+                                <div class="col-md-10">
                                     <a href="/profile"><img src="/assets/random10.jpg">
                                     <p class="username">Messaps <span> &#8226; </span></p></a>
                                     <a href="/singlecommunity"><p class="community"> MobileDev</p></a>
@@ -215,7 +223,7 @@
                         <!-- User info-->
                         <div class="container user">
                             <div class="row">
-                                <div class="col-11">
+                                <div class="col-md-10">
                                     <a href="/profile"><img src="/assets/random3.jpg">
                                     <p class="username">Fenty <span> &#8226; </span></p></a>
                                     <a href="/singlecommunity"><p class="community"> AngularKenya</p></a>
@@ -254,7 +262,7 @@
                         <!-- User info-->
                         <div class="container user">
                             <div class="row">
-                                <div class="col-11">
+                                <div class="col-md-10">
                                     <a href="/profile"><img src="/assets/random3.jpg">
                                     <p class="username">Jon Skeet <span> &#8226; </span></p></a>
                                     <a href="/singlecommunity"><p class="community"> AngularKenya</p></a>
@@ -291,8 +299,8 @@
                 </div>
             </div>
         
-        </div>
-        <div class="col"></div>
+        </div>        
+        <div class="col-md-1"></div>
     </div>
 </div>
 

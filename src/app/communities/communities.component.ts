@@ -8,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunitiesComponent implements OnInit {
 
+  //for opening collapsible menu
   openNav() {
     document.getElementById("mySidepanel").style.width = "200px";
   }
 
+  //for closing collapsible menu
   closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }

@@ -2,7 +2,7 @@
 .background {
     background: #f0f0f08f;  
     height: fit-content;
-    max-height: 93vh;     
+    max-height: 99.5%;     
     width: 100%;
 }
   
@@ -23,16 +23,83 @@
       background: linear-gradient(#ffffff,#ffffffe7,#ffffffd7,#ffffff9a), url("/assets/sidepanel-background.jpg");
       background-size: cover;
       text-align: center;
-      width: 0;    
+      width: 230px;    
       position: fixed;    
       overflow-x: hidden;
-      z-index: 1;
-      top: 7vh;
+      z-index: 1;      
       left: 0;
       transition: 0.5s;
-      height: 93vh;
+      height: 99.5%;
     }
-    
+
+    //Logo area
+    .print {    
+      position: relative;
+      margin-left: -2px;
+      width: 30px;
+      height: 40px;    
+      left: -7px;
+      background: url("https://media.istockphoto.com/vectors/tribal-pattern-vector-seamless-vector-id814505894");
+      background-size: contain;  
+      display: inline-block;  
+    }
+    .line1 {
+        position: relative;
+        border-left: 5px solid #FD7F20;
+        height: 40px;            
+        left: -6px;
+        display: inline-block;  
+    }
+    .line2 {
+        position: relative;
+        border-left: 2px solid #000000;
+        height: 40px; 
+        left: -5px;           
+        display: inline-block;  
+    }
+
+    //App-name
+    .brand {
+        font-family: "Ovo";
+        color: #FD7F20;
+        left: -20px;      
+        margin-top: -2px;
+        position: relative;      
+        font-size: 25px;
+        display: inline-block;  
+    }
+
+    .drop1 {
+      position: absolute;
+      top: 45px;    
+      right: -3px;
+      color: #08DD80;
+
+      .fas {
+        font-size: 25px;
+        margin-left: 2px;
+        padding: 5px;
+      }
+    }
+    .dropm {      
+      margin-top: -4px;    
+      width: 30%;
+      background: #dde2e7d7;
+      border: none;
+      text-align: center;
+
+      a {
+        padding: 5px;
+        color: white; 
+        font-weight: 500;   
+      }
+      a:hover {
+        color: #FD7F20;    
+      }
+    }
+
+    /* close button removed
+
     .closebtn {
       position: absolute;
       top: 0;
@@ -40,7 +107,7 @@
       font-size: 36px;
       margin-left: 50px;
       color: grey;
-    }
+    }*/
 
     .prof-icon {
       height: 150px;
@@ -69,7 +136,7 @@
     }
     
     .sidenavs-active {
-        padding:20px 0;  
+        padding:15px 0;  
         margin-top: -5px; 
         margin-left: -15px; 
         margin-right: -15px; 
@@ -103,7 +170,7 @@
         font-weight: normal;
     }
     
-    .sidebar h6 {
+    .home {
         margin-top: 20%;
     }
   

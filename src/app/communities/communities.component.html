@@ -1,46 +1,62 @@
-<app-navbar></app-navbar>
-
 <div class="container-fluid background">
     <div class="row">
         <div class="col">
             <div class="row">
-                <div class="col sidepanel">                      
-                    <div id="mySidepanel" class="sidebar">
-                        <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
-                        <img class="prof-icon" src="/assets/random10.jpg">    
-                        <h5 class="side-user"> Username</h5>              
-                        <h6 class="sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                <!-- sidepanel-->
+                <div class="col sidepanel">
+                    <div id="mySidepanel" class="sidebar"> 
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="print"></div>
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                            </div>
+                            <div class="col">
+                                <a class="navbar-brand brand" routerLink="">Drumstick.</a>            
+                            </div>
+                        </div> 
+                        <div class="btn btn-light dropdown-toggle drop1" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i>
+                        </div>  
+                        <div class="dropdown-menu dropm" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item"  href="/login">Login</a>
+                            <a class="dropdown-item"  href="/signup">Sign up</a>
+                        </div>
+
+                        <img class="prof-icon" src="/assets/random10.jpg">   
+                        <h5 class="side-user"> Username</h5>     
+                        <p class="home sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></p>
                         <p class="sidenavs"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
                         <p class="sidenavs-active"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
                         <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
                         <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
-                    </div>                     
-                    <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
-                </div>
-                <div class="col"></div>
+                    </div>                   
+                </div>                
             </div>
         </div>               
         <div class="col-md-9" style="height: fit-content;">
-            <div class="row" style="margin-top: 21px;">                  
+            <div class="row" style="margin-top: 21px;width: 100%;">                  
                 <div class="col">
                     <div class="container communities">                    
                         <h4 class="heading">Communities<sup class="superscript">2</sup></h4>
                         <hr style="width: 108%; margin:-10px 0 0 -15px;">
                         <ul class="container list">
                             <!-- loop user communities-->
-                            <li><a href="/singlecommunity">
-                                <hr style="margin: 0 0 5px 0;">
-                                <div class="row unread" >
-                                    <div class="col-sm-1">
-                                        <img class="comicon" src="/assets/angular kenya.jpg">
-                                    </div>
-                                    <div class="col">
-                                        <h6>Angular Kenya</h6>
-                                        <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
-                                        <span class="time">3mins</span>
-                                    </div>
-                                </div>                                                                                       
-                            </a></li>
+                            <li>
+                                <a href="/singlecommunity">
+                                    <hr style="margin: 0 0 5px 0;">
+                                    <div class="row unread" >
+                                        <div class="col-sm-1">
+                                            <img class="comicon" src="/assets/angular kenya.jpg">
+                                        </div>
+                                        <div class="col">
+                                            <h6>Angular Kenya</h6>
+                                            <p><span class="username">Pew Pew:</span><span class="title"> Project1.9-7.14</span> Working on a loader for ngx-translate internationalization library that loads locally stored translations for NativeScript Angular.  In need of one angular dev.</p>
+                                            <span class="time">3mins</span>
+                                        </div>
+                                    </div>                                                                                       
+                                </a>
+                            </li>
                             <li>
                                 <hr style="margin: 0 0 5px 0;">
                                 <div class="row unread" >
@@ -106,11 +122,12 @@
                         <p class="guide">4. Have fun and learn from others.</p>
                         <p class="guide">5. Beware of community guidelines.</p>
                     </div>
-                </div>                
-                <div class="col-md-7">
+                </div>           
+                <div class="col-sm-1"></div>                    
+                <div class="col-md-6">
                     <!-- foreground-->
-                    <div class="container foreground">
-                        <h4 class="heading">Explore communities</h4>
+                    <div class="container-fluid foreground">
+                        <h2 class="heading">Explore communities</h2>
                         <div class="slider-area">
                             <ngx-slick-carousel class="carousel top_slider" 
                                 #slickModal="slick-carousel" 
@@ -158,8 +175,8 @@
                             </ngx-slick-carousel>
                         </div>
                         <div class="search-bar container">                                                        
-                            <div class="row">
-                                <div class="col-md-5">
+                            <div class="row" style="width: 100%;">
+                                <div class="col">
                                     <form id="app-cover">
                                             <div id="select-box">
                                                 <input type="checkbox" id="options-view-button">
@@ -212,22 +229,22 @@
                                                             <input class="s-c top" type="radio" name="platform" value="freecodecamp">
                                                             <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
                                                             <i class="fab fa-cuttlefish c"></i>
-                                                            <span class="label">C -Language</span>
-                                                            <span class="opt-val">C -Language</span>
+                                                            <span class="label">C </span>
+                                                            <span class="opt-val">C </span>
                                                     </div>
                                                     <div class="option">
                                                         <input class="s-c top" type="radio" name="platform" value="freecodecamp">
                                                         <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                        <i class="fab fa-cuttlefish cplusplus">++</i>
-                                                        <span class="label">C++ -Language</span>
-                                                        <span class="opt-val">C++ -Language</span>
+                                                        <i class="fab fa-cuttlefish cplusplus"></i>
+                                                        <span class="label">C++ </span>
+                                                        <span class="opt-val">C++ </span>
                                                     </div>
                                                     <div class="option">
                                                         <input class="s-c top" type="radio" name="platform" value="freecodecamp">
                                                         <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
-                                                        <i class="fab fa-cuttlefish csharp">#</i>
-                                                        <span class="label">C# -Language</span>
-                                                        <span class="opt-val">C# -Language</span>
+                                                        <i class="fab fa-cuttlefish csharp"></i>
+                                                        <span class="label">C# </span>
+                                                        <span class="opt-val">C# </span>
                                                     </div>                                                                                        
                                                     <div class="option">
                                                         <input class="s-c top" type="radio" name="platform" value="freecodecamp">
@@ -257,7 +274,7 @@
                                 </div>
                                 <div class="col">
                                     <span style="display: inline-block; font-size: 20px;">| </span> 
-                                    <input class="search" type="input" placeholder="search" style="width: 90%;display: inline-block; margin-left: 10px;">
+                                    <input class="search" type="input" placeholder="search" style="width:95%; display: inline-block; background: none;">
                                     <i class="fas fa-search"></i>                                                                
                                 </div>
                             </div>                                                                            
@@ -276,70 +293,113 @@
                                 
                         <!-- Post card1-->
                         <div class="container C1 post">
-                        <!-- User info-->
-                        <div class="container user">
-                            <div class="row">
-                                <div class="col-10">
-                                    <div class="mock-icon"></div>
-                                    <div class="mock-username"></div>
-                                    <div class="mock-community"></div>
+                            <!-- User info-->
+                            <div class="container user">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="mock-icon"></div>
+                                        <div class="mock-username"></div>
+                                        <div class="mock-community"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fas"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--post title-->
+                            <div class="mock-title"></div>
+                            <div class="mock-text1 container"></div>
+                            <div class="mock-text2 container"></div>
+                            <div class="mock-image-post"></div>                                                
+                            <div class="container info">
+                                <div class="mock-stars"></div>
+                                <div class="mock-stars"></div>
+                            </div>
+                            <hr style="margin-top: -10px;">
+                            <!---->
+                            <div class="row interact">
+                                <div class="col">
+                                    <div class="far"></div>
+                                    <div class="h6"></div>                                
+                                </div>                            
+                                <div class="col">
+                                    <div class="far "></div>
+                                    <div class="h6"></div>
                                 </div>
                                 <div class="col">
-                                    <div class="fas"></div>
-                                </div>
+                                    <div class="far"></div>
+                                    <div class="h6"></div>
+                                </div>                        
                             </div>
-                        </div>
-                        <!--post title-->
-                        <div class="mock-title"></div>
-                        <div class="mock-text1 container"></div>
-                        <div class="mock-text2 container"></div>
-                        <div class="mock-image-post"></div>                                                
-                        <div class="container info">
-                            <div class="mock-stars"></div>
-                            <div class="mock-stars"></div>
-                        </div>
-                        <hr style="margin-top: -10px;">
-                        <!---->
-                        <div class="row interact">
-                            <div class="col">
-                                <div class="far"></div>
-                                <div class="h6"></div>                                
-                            </div>                            
-                            <div class="col">
-                                <div class="far "></div>
-                                <div class="h6"></div>
-                            </div>
-                            <div class="col">
-                                <div class="far"></div>
-                                <div class="h6"></div>
-                            </div>                        
-                        </div>
                         </div>
 
                         <!-- Post card2-->
                         <div class="container C1 post">
-                        <!-- User info-->
-                        <div class="container user">
-                            <div class="row">
-                                <div class="col-10">
-                                    <div class="mock-icon"></div>
-                                    <div class="mock-username"></div>
-                                    <div class="mock-community"></div>
+                            <!-- User info-->
+                            <div class="container user">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="mock-icon"></div>
+                                        <div class="mock-username"></div>
+                                        <div class="mock-community"></div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fas"></div>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <!--post title-->
+                            <div class="mock-title"></div>
+                            <div class="mock-text1 container"></div>
+                            <div class="mock-text2 container"></div>                    
+                            <div class="mock-image-post"></div>                                                
+                            <div class="container info">
+                                <div class="mock-stars"></div>
+                                <div class="mock-stars"></div>
+                            </div>
+                            <hr style="margin-top: -10px;">
+                            <!---->
+                            <div class="row interact">
+                                <div class="col">
+                                    <div class="far"></div>
+                                    <div class="h6"></div>                                
+                                </div>                            
+                                <div class="col">
+                                    <div class="far "></div>
+                                    <div class="h6"></div>
                                 </div>
                                 <div class="col">
-                                    <div class="fas"></div>
-                                </div>
-                            </div>                            
-                        </div>
-                        <!--post title-->
-                        <div class="mock-title"></div>
-                        <div class="mock-text1 container"></div>
-                        <div class="mock-text2 container"></div>                    
+                                    <div class="far"></div>
+                                    <div class="h6"></div>
+                                </div>                        
+                            </div>
                         </div>  
                     </div>                                                                 
-                </div>                  
-            </div>             
-        </div>         
-        <div class="col-md-1"></div>   
+                </div>                      
+            </div>                      
+        </div>              
+        <div class="col-sm-1"></div>        
     </div>        
 </div>
+
+
+<!--
+    Collapsible menu
+
+    <div class="row">
+        <div class="col sidepanel">                      
+            <div id="mySidepanel" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>          
+                <img class="prof-icon" src="/assets/random10.jpg">    
+                <h5 class="side-user"> Username</h5>              
+                <h6 class="sidenavs"><a routerLink="/"> <span class="addon"><</span><span class="addon">/</span>Home<span class="addon">></span>  </a></h6>
+                <p class="sidenavs"><a routerLink="/profile"> <span class="addon"><</span><span class="addon">/</span>Profile<span class="addon">></span> </a></p>
+                <p class="sidenavs-active"><a routerLink="/communities"> <span class="addon"><</span><span class="addon">/</span>Communities<span class="addon">></span> </a></p>
+                <p class="sidenavs"><a routerLink="/notifications"> <span class="addon"><</span><span class="addon">/</span>Notifications<span class="addon">></span> </a></p>
+                <p class="sidenavs"><a routerLink="/projects"> <span class="addon"><</span><span class="addon">/</span>Projects<span class="addon">></span> </a></p>
+            </div>                     
+            <i (click)="openNav()" class="fas fa-bars openbtn"></i>                    
+        </div>
+        <div class="col"></div>
+    </div>
+-->

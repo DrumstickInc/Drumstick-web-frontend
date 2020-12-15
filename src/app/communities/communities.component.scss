@@ -1,9 +1,7 @@
 //Background
 .background {
-    background: #f0f0f08f;  
-    height: fit-content;
-    max-height: 93vh; 
-    overflow-y: scroll;
+    background: #f0f0f08f;      
+    height: 99.5%;     
     width: 100%;
   }
 
@@ -21,17 +19,83 @@
     }
     .sidebar {
       background: linear-gradient(#ffffff,#ffffffe7,#ffffffd7,#ffffff9a), url("/assets/sidepanel-background.jpg");
+      background-size: cover;
       text-align: center;
-      width: 0;    
+      width: 230px;    
       position: fixed;    
       overflow-x: hidden;
-      z-index: 1;
-      top: 7vh;
+      z-index: 1;      
       left: 0;
       transition: 0.5s;
-      height: 93vh;
+      height: 99.5%;
     }
-    
+
+    //Logo area
+    .print {    
+      position: relative;
+      margin-left: -2px;
+      width: 20px;
+      height: 40px;    
+      left: -7px;
+      background: url("https://media.istockphoto.com/vectors/tribal-pattern-vector-seamless-vector-id814505894");
+      background-size: contain;  
+      display: inline-block;  
+    }
+    .line1 {
+        position: relative;
+        border-left: 5px solid #FD7F20;
+        height: 40px;            
+        left: -5px;
+        display: inline-block;  
+    }
+    .line2 {
+        position: relative;
+        border-left: 2px solid #000000;
+        height: 40px; 
+        left: -5px;           
+        display: inline-block;  
+    }
+
+    //App-name
+    .brand {
+        font-family: "Ovo";
+        color: #FD7F20;
+        left: -20px;      
+        margin-top: -2px;
+        position: relative;      
+        font-size: 25px;
+        display: inline-block;  
+    }
+
+    .drop1 {
+      position: absolute;
+      top: 45px;    
+      right: -3px;
+      color: #08DD80;
+
+      .fas {
+        font-size: 25px;
+        margin-left: 2px;
+        padding: 5px;
+      }
+    }
+    .dropm {      
+      margin-top: -4px;    
+      width: 30%;
+      background: #dde2e7d7;
+      border: none;
+      text-align: center;
+
+      a {
+        padding: 5px;
+        color: white; 
+        font-weight: 500;   
+      }
+      a:hover {
+        color: #FD7F20;    
+      }
+    }
+
     .closebtn {
       position: absolute;
       top: 0;
@@ -102,7 +166,7 @@
         font-weight: normal;
     }
     
-    .sidebar h6 {
+    .home {
         margin-top: 20%;
     }
   
@@ -113,14 +177,14 @@
 .communities {    
     background: #e2e1e18f;
     height: fit-content;
-    width: 95%;
+    width: 100%;
     margin: 10px 20px;
     border-radius: 5px;
 }
 
 //communities list heading
 .heading {
-    padding: 20px;    
+    text-align: center;
 }
 
 // communities number
@@ -230,6 +294,7 @@
     position: absolute;
     background: #fcfcfccb;
     height: 100%;
+    width: 105%;
     opacity: 1;
     .heading{
         color: #08DD80;
@@ -238,6 +303,7 @@
 
     // communities slider    
     .slider-area {
+        width: 98%;
         .top_slider {
           display: flex;
         }
@@ -474,7 +540,7 @@
         
         .s-c.bottom:hover + i
         {
-            bottom: 10px;
+            bottom: 30px;
             animation: moveup 0.3s ease 0.1s forwards;
         }
         
@@ -545,6 +611,8 @@
         #options-view-button:not(:checked) ~ #options .option input[type="radio"]:checked ~ .opt-val
         {
             top: -30px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(1) input[type="radio"]:checked ~ .label:before
@@ -556,6 +624,8 @@
         .option:nth-child(1) input[type="radio"]:checked ~ .opt-val
         {
             top: -31px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(2) input[type="radio"]:checked ~ .label:before
@@ -566,11 +636,15 @@
         .option:nth-child(2) input[type="radio"]:checked ~ .opt-val
         {
             top: -71px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(3) input[type="radio"]:checked ~ .opt-val
         {
             top: -111px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(4) input[type="radio"]:checked ~ .label:before
@@ -581,6 +655,8 @@
         .option:nth-child(4) input[type="radio"]:checked ~ .opt-val
         {
             top: -151px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(5) input[type="radio"]:checked ~ .label:before
@@ -591,19 +667,83 @@
         .option:nth-child(5) input[type="radio"]:checked ~ .opt-val
         {
             top: -191px;
+            width: 70%;
+            text-align: center;
         }
         
         .option:nth-child(6) input[type="radio"]:checked ~ .label:before
         {
-            background-color: #006400;
-            border-radius: 0 0 4px 4px;
+            background-color: #42408f;            
         }
         
         .option:nth-child(6) input[type="radio"]:checked ~ .opt-val
         {
             top: -231px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .option:nth-child(7) input[type="radio"]:checked ~ .label:before
+        {
+            background-color: #2a72ad;            
         }
         
+        .option:nth-child(7) input[type="radio"]:checked ~ .opt-val
+        {
+            top: -271px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .option:nth-child(8) input[type="radio"]:checked ~ .label:before
+        {
+            background-color: #8a118a;            
+        }
+        
+        .option:nth-child(8) input[type="radio"]:checked ~ .opt-val
+        {
+            top: -311px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .option:nth-child(9) input[type="radio"]:checked ~ .label:before
+        {
+            background-color: #787CB5;            
+        }
+        
+        .option:nth-child(9) input[type="radio"]:checked ~ .opt-val
+        {
+            top: -351px;
+            width: 70%;
+            text-align: center;
+        }
+        
+        .option:nth-child(10) input[type="radio"]:checked ~ .label:before
+        {
+            background-color: #26e4d4;            
+        }
+        
+        .option:nth-child(10) input[type="radio"]:checked ~ .opt-val
+        {
+            top: -391px;
+            width: 70%;
+            text-align: center;
+        }
+
+        .option:nth-child(11) input[type="radio"]:checked ~ .label:before
+        {
+            background-color: #d62e10;
+            border-radius: 0 0 4px 4px;
+        }
+        
+        .option:nth-child(11) input[type="radio"]:checked ~ .opt-val
+        {
+            top: -431px;
+            width: 70%;
+            text-align: center;
+        }
+
         .option .fa-python
         {
             color:#4B8BBE;
@@ -715,36 +855,31 @@
         .option:nth-child(6):hover ~ #option-bg
         {
             top: 200px;
-            background-color: #42408f;
-            border-radius: 0 0 4px 4px;
+            background-color: #42408f;            
         }
         
         .option:nth-child(7):hover ~ #option-bg
         {
             top: 240px;
-            background-color: #2a72ad;
-            border-radius: 0 0 4px 4px;
+            background-color: #2a72ad;           
         }
         
         .option:nth-child(8):hover ~ #option-bg
         {
             top: 280px;
-            background-color: #8a118a;
-            border-radius: 0 0 4px 4px;
+            background-color: #8a118a;            
         }
         
         .option:nth-child(9):hover ~ #option-bg
         {
             top: 320px;
-            background-color: #787CB5;
-            border-radius: 0 0 4px 4px;
+            background-color: #787CB5;            
         }
         
         .option:nth-child(10):hover ~ #option-bg
         {
             top: 360px;
-            background-color: #26e4d4;
-            border-radius: 0 0 4px 4px;
+            background-color: #26e4d4;            
         }
         
         .option:nth-child(11):hover ~ #option-bg
@@ -759,13 +894,17 @@
 
 /**** Mock Background ****/
 .mock-background {
-    overflow: hidden;    
+    overflow: hidden;
+    width: 115%; 
+    height: 97vh;  
+    overflow-y: hidden;
     //make post card
     .C1 {
         border: solid #e0e0e0d7 0.01em;
         margin-top: 2%;
         background: #ffffff;
         border-radius: 3px;
+        width: 20px;
     }
     .mp {
       height: 50px;
@@ -920,13 +1059,9 @@
 
 }
 
-
-
-
-
 .search {
     border: none;    
-    background: #f1f1f1;
+    background: #dc3b3b;
     padding-top: 5px; 
     padding-bottom: 5px;
     padding-left: 5px;
